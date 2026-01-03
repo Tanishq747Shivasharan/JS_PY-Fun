@@ -1,9 +1,9 @@
-from password_checker import passwd
+from passwd_checker import check_weak_passwd
 
 passwd = input("Enter your password: ")
 
-errs =  passwd.check_passwd(passwd)
-if errs == 0:
+errs = check_weak_passwd(passwd)
+if len(errs) == 0:
     print("Your password is strong enough")  
 else:
     print("Your password is weak, please try again")

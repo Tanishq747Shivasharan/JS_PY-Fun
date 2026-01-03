@@ -5,12 +5,6 @@ def check_weak_passwd(passwd):
         {
             "message": "Password must be at least 8 characters long",
             "test": lambda pwd: len(pwd) >= 8
-            """
-            lambda - keyword to create a small function
-            pwd - input parameter
-            : - separates input from logic
-            len(pwd) >= 8 - expression to return
-            """
         },
         {
             "message": "Password must contain an uppercase letter",
