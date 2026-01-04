@@ -9,7 +9,7 @@ file_output = "learn.txt"
 # 
 
 try:
-    with open(file_output, "x") as file:
+    with open(file_output, "a") as file:
         file.write(data + input("Enter something to append into the existing file: "))
         print(f"Text file '{file_output}' was created")
 except FileExistsError:
