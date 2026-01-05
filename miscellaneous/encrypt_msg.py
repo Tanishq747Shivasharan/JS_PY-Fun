@@ -25,3 +25,13 @@ for letter in msg:
 print(f"Original message: {msg}")
 print(f"Encrypted message: {cipher}")
 
+# Decryption
+cipher = input("Enter a message to decrypt: ")
+org_msg = ""
+
+for letter in cipher:
+    idx = key.index(letter)
+    org_msg += chars[idx]
+
+print(f"Encrypted message: {cipher}")
+print(f"Decrypted message: {org_msg}")
