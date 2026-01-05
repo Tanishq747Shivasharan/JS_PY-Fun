@@ -1,13 +1,16 @@
+"""
+This program implements a monoalphabetic substiution cipher.
+Each character is mapped to a randomized character using a key.
+Security depends on secret of the key.
+"""
+
 import string
 import random
 
 chars = " " + string.punctuation + string.digits + string.ascii_letters
 
 chars = list(chars)
-
 key = chars.copy()
-
-# print(chars)
 
 random.shuffle(key)
 
