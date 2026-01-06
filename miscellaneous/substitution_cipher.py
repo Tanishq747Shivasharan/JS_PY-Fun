@@ -6,20 +6,19 @@ Security depends on secret of the key.
 
 import string
 import random
+import os
 
 chars = " " + string.punctuation + string.digits + string.ascii_letters
 
-chars = list(chars)
-key = chars.copy()
+if not os.path.exists("key.txt"):
+    key = chars.copy()
+    random.shuffle(key)
+    with  open("key.txt", "w") as f:
+        f.write("".join(key))
+else:
+    with open("key.txt", "r") as f:
+        key = list(f.read())
 
-random.shuffle(key)
-
-# Saving the key
-with open("key.txt", "w") as f:
-    f.write("".join(key))
-
-with open("key.txt", "r") as f:
-    key = list(f.read())
 
 encrypt_map = dict(zip(chars, key))
 decrypt_map = dict(zip(key, chars))
