@@ -16,3 +16,11 @@ for i in range(len(encodedPlain_txt)):
     
 ciphertext_bytes = bytes(list_txt)
 print('Encrypted message:', ciphertext_bytes.hex())
+
+# Decryption
+for i in range(len(ciphertext_bytes)):
+    xor_res = list_txt[i] ^ list_key[i] # XOR operation to encrypt the plain text.
+    list_txt[i] = xor_res
+    
+decrypted_bytes = bytes(list_txt)
+print('Decrypted message:', ciphertext_bytes.decode())
