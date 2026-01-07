@@ -6,8 +6,13 @@ encodedPlain_txt = plain_txt.encode() # encoding the plain text to byte.
 
 key = secrets.token_bytes(len(plain_txt)) # encoding the key to byte.
 
+list_txt = list(encodedPlain_txt) # converting the encoded plain text to list.
+list_key = list(key) # converting the key to list.
+
 # Encryption
 for i in range(len(encodedPlain_txt)):
-    encodedPlain_txt[i] ^= encodedPlain_key[i] # XOR operation to encrypt the plain text.
-
+    xor_res = list_txt[i] ^ list_key[i] # XOR operation to encrypt the plain text.
+    list_txt[i] = xor_res
+    
+ciphertext_bytes = bytes(list_txt)
 print('Encrypted message:', ciphertext_bytes.hex())
