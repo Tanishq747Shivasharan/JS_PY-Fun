@@ -21,7 +21,7 @@ Each project focuses on clarity, correctness, and learning value rather than unn
 
 ## What This Repo Contains
 
-* Mini projects implemented in **JavaScript** and **Python**
+* Mini projects implemented in **JavaScript** and **Python**(More focus would be given to Python as many tools realted to info sec are scripted in Python.)
 * Logic-first implementations (validation, conditions, filtering, etc.)
 * Functional programming concepts like:
 
@@ -29,7 +29,7 @@ Each project focuses on clarity, correctness, and learning value rather than unn
   * `map()`
   * lambdas / arrow functions
 * UI + logic separation (where applicable)
-* Beginner-friendly but **industry-style** coding practices
+* Beginner-friendly but **industry-style** coding practices not just filter and map functions and many more functions and methods as the learning and implementation journey increments.
 
 ---
 
@@ -42,22 +42,6 @@ Each project focuses on clarity, correctness, and learning value rather than unn
 * CLI-based Python programs for logic practice
 
 ---
-
-## Project Structure (General) will be updated as per the projects will be added
-
-```
-JS_PYFun/
-│
-├── JavaScript/
-│   ├── password-checker/
-│   ├── logic-experiments/
-│
-├── Python/
-│   ├── password-validator/
-│   ├── logic-exercises/
-│
-└── README.md
-```
 
 Each project is self-contained and documented for easy understanding.
 
