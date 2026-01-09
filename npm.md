@@ -1,6 +1,6 @@
 # NPM Understanding.
-<h4>npm is the package manager for Node.js that lets me install, update, and manage libraries (packages) your project needs.
-It also helps you run project scripts and keep dependencies organized using package.json.<h4>
+<h4>npm is the package manager for Node.js that lets me and you install, update, and manage libraries (packages) your's as well as mine project needs.
+It also helps me and you run project scripts and keep dependencies organized using package.json.<h4>
 
 ## Installing and uninstalling anything basics & advanced.
 
