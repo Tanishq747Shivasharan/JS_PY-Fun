@@ -31,7 +31,6 @@ Running a simple server on port 8000 using the command.
     fg
 
 These files can be accessed from any other devices using the ip like this
-    if your ip is 192.168.1.5:~ python -m http.server 8000
-                              ~ http://192.168.1.5:8000
+    if your ip is 192.168.1.5:~ python -m http.server 8000 -b 192.168.1.5 ---> The prerequisite is that the ip should exist and the -b is bind to this ip and send an request to the server.
                               You can also access your server from any other devices using the ip like this
  """
