@@ -2,8 +2,12 @@ def greet(name):
     print(f"Hello {name}!") # Static way of showing the res.
 
 if __name__ == "__main__":
-    name = input("Enter your name: ")   # This is the main function so whatever functions declared should be above the main function.
-    greet(name)
+    name = input("Enter your name: ")
+    if not name.strip():
+        print("Invalid name")
+        greet("anonymous")
+    else:   # This is the main function so whatever functions declared should be above the main function.
+        greet(name)
 
 # def greet(name):
 #     return f"Hello {name}!" # Dynamic way of showing the result. # wrong way of defining the functions in Python.
