@@ -40,7 +40,7 @@ def greetWithKeyword_arg(fname, lname): # --> keyword arguments are both fname a
     
 # static way of calling a function.
 greetWithKeyword_arg(fname = "Tanishq", lname = "Shivasharan") # --> Keyword arguments are used to assign the values to the arguments in the function.
-greetWithKeyword_arg(lname = "Gundla", lname = "Manya")
+greetWithKeyword_arg(lname = "Gundla", fname = "Manya")
 
 def nameAge(name, age): # --> Positional arguments are name and age values are assigned to parameters based on their order in the function call.
     print("Hi, I am", name)
@@ -51,3 +51,15 @@ nameAge("Suraj", 27)
 
 print("\nCase-2:")
 nameAge(27, "Suraj")
+
+def power_cal(*numbers):    # *numbers is an tuple
+    total = 0    
+    for n in numbers:
+        if (n % 2==0):
+            res = n**2
+        else:
+            res = n**3
+        total = total + res
+    return total
+
+print("Power Score: ", power_cal(2,3,6,7,9,0,1))    # --> It's like saying that we are passing multiple arguments to the function. Sometimes, we don't know how many values user will pass to a function. So Py says: Fine, I'll catch them all in one variable.
