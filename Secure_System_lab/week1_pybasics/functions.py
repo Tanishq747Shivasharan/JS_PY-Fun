@@ -75,3 +75,30 @@ def print_marks(**kwargs):    # **marks is an dictionary --> **kwargs --> dictio
     print(f"Average = {avg}")
 
 print_marks(Maths=85, Physics=90, Chemistry=88)
+
+# Function within Function(Inner function.)
+def f1():
+    s = 'I love Python programming language.'
+    def f2():
+        print(s)
+    
+    f2()
+f1()
+
+# Anonymous Function(lambda keyword is used to create an anonymous functions.)
+check = lambda x : x if x%2==0 else x
+print(check(10))  
+print(check(7))  
+# Extracting numbers greater than 50 from this given list.
+marks = [45, 78, 62, 30, 90, 55]
+extract = list(filter(lambda x : x > 50, marks))
+print(extract)
+
+# Recursive Function 
+def factorial(n):
+    if n == 0:  
+        return 1
+    else:
+        return n * factorial(n - 1) 
+      
+print(factorial(4))
