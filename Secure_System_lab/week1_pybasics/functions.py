@@ -52,7 +52,7 @@ nameAge("Suraj", 27)
 print("\nCase-2:")
 nameAge(27, "Suraj")
 
-def power_cal(*numbers):    # *numbers is an tuple
+def power_cal(*numbers):    # *numbers is an tuple --> *args --> tuple
     total = 0    
     for n in numbers:
         if (n % 2==0):
@@ -63,3 +63,15 @@ def power_cal(*numbers):    # *numbers is an tuple
     return total
 
 print("Power Score: ", power_cal(2,3,6,7,9,0,1))    # --> It's like saying that we are passing multiple arguments to the function. Sometimes, we don't know how many values user will pass to a function. So Py says: Fine, I'll catch them all in one variable.
+
+def print_marks(**kwargs):    # **marks is an dictionary --> **kwargs --> dictionary
+    total = 0
+    avg = 0
+    for Subject, marks in kwargs.items():
+        print(f"{Subject} : {marks}")
+        total = total + marks
+    avg = total/3
+    print(f"Total = {total}")
+    print(f"Average = {avg}")
+
+print_marks(Maths=85, Physics=90, Chemistry=88)
