@@ -22,17 +22,17 @@ Each project represents a step in my learning process, emphasizing understanding
 
 ## What This Repository Contains
 
-### 🔐 Security & Cryptography Projects
+### Security & Cryptography Projects
 * **Password Security Tools** - Strength validation with both Python CLI and React web interface
 * **Classical Ciphers** - Rail Fence, Substitution, and Vernam cipher implementations
 * **Network Security** - Basic port scanning and unauthorized access detection tools
 
-### 🛠️ System Programming & Web Development
+### System Programming & Web Development
 * **Express.js Server** - Basic web server implementation
 * **File Operations** - Secure file handling and logging utilities
 * **Python Fundamentals** - Advanced function concepts and security lab exercises
 
-### 🎯 Cross-Language Implementations
+### Cross-Language Implementations
 * **Password Validation** - Identical logic implemented in both Python and JavaScript
 * **Functional Programming** - Filter, map, and lambda functions across languages
 * **Modern UI/UX** - React-based interfaces with Tailwind CSS styling
@@ -72,17 +72,17 @@ Each project represents a step in my learning process, emphasizing understanding
 
 ## Featured Projects
 
-### 🔑 Password Security Suite
+### Password Security Suite
 - **CLI Tool**: Interactive password validation with detailed feedback
 - **Web Interface**: Real-time strength analysis with visual indicators
 - **Cross-platform**: Identical validation logic in Python and JavaScript
 
-### 🔐 Cryptographic Implementations
+### Cryptographic Implementations
 - **Rail Fence Cipher**: Classical transposition cipher with encryption/decryption
 - **Substitution Cipher**: Monoalphabetic cipher with key generation
 - **Vernam Cipher**: Cryptographically secure one-time pad implementation
 
-### 🌐 Network Security Tools
+### Network Security Tools
 - **Port Scanner**: Basic network reconnaissance utility
 - **Access Detector**: File-based logging and monitoring system
 
@@ -189,10 +189,10 @@ New security tools, cryptographic implementations, and educational projects are 
 - Deeper understanding of secure coding practices
 
 **Recent Learning Milestones:**
-- ✅ Password validation across Python and JavaScript
-- ✅ Classical cipher implementations (Rail Fence, Substitution, Vernam)
-- ✅ Basic network reconnaissance tools
-- ✅ React-based security interfaces with real-time validation
+- Password validation across Python and JavaScript
+- Classical cipher implementations (Rail Fence, Substitution, Vernam)
+- Basic network reconnaissance tools
+- React-based security interfaces with real-time validation
 
 ---
 
@@ -219,5 +219,5 @@ Feel free to reach out if you're working on similar learning goals - I'd love to
 
 ---
 
-**Happy Learning & Secure Coding!** 🔐📚  
+**Happy Learning & Secure Coding!**   
 *Learn. Implement. Secure. Share. Repeat.*
