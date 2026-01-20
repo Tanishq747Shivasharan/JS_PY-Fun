@@ -25,3 +25,15 @@ last_name = 'Shivasharan'
 first_name = 'Tanishq'
 middle_name = 'Shekhar'
 print(f"My full name is: {last_name=} {first_name=} {middle_name=}")
+
+# simple login...(Simulation).
+# hardcoded values
+username = "Wisdom"
+password = "kingV@333$"
+username = input("Enter your username: ")
+password = input("Enter your password: ")
+
+if username == "Wisdom" and password == "kingV@333$":
+    print("you are logged in")
+else:
+    print("please enter correct credentials")
