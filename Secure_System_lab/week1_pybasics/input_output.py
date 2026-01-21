@@ -33,7 +33,16 @@ password = "kingV@333$"
 username = input("Enter your username: ")
 password = input("Enter your password: ")
 
-if username == "Wisdom" and password == "kingV@333$":
-    print("you are logged in")
-else:
-    print("please enter correct credentials")
+threshold = 3
+
+# Simple logical operator in Python(and, or, not)
+while threshold <= 3:
+    if username != "Wisdom" and password != "kingV@333$":
+        print("please enter correct credentials")
+        username = input("Enter your username: ")
+        password = input("Enter your password: ")
+    elif username == "Wisdom" and password == "kingV@333$":
+        print("login successful")
+        break
+
+    threshold = threshold + 1
