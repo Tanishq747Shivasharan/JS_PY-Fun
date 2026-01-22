@@ -1,4 +1,3 @@
-import os
 import secrets
 
 while True:
