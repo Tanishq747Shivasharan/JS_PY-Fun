@@ -26,23 +26,23 @@ first_name = 'Tanishq'
 middle_name = 'Shekhar'
 print(f"My full name is: {last_name=} {first_name=} {middle_name=}")
 
-# simple login...(Simulation).
-# hardcoded values
-username = "Wisdom"
-password = "kingV@333$"
-username = input("Enter your username: ")
-password = input("Enter your password: ")
 
+# Brute_force demo with threshold
+real_uname = "WisdomHaki"
+real_pword = "Robin@321&#"
+
+attempts = 0
 threshold = 3
 
-# Simple logical operator in Python(and, or, not)
-while threshold <= 3:
-    if username != "Wisdom" and password != "kingV@333$":
-        print("please enter correct credentials")
-        username = input("Enter your username: ")
-        password = input("Enter your password: ")
-    elif username == "Wisdom" and password == "kingV@333$":
-        print("login successful")
+while attemps < threshold:
+    username = input("Enter Username: ")
+    password = input("Enter Password: ")
+    if real_uname == username and real_pword == password:
+        print("Login Successful")
         break
+    else:
+        print("Invalid crendentials!")
+        attempts += 1
 
-    threshold = threshold + 1
+if attempts == threshold:
+    print("Account Locked")
