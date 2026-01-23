@@ -29,7 +29,7 @@ print(f"My full name is: {last_name=} {first_name=} {middle_name=}")
 
 # Brute_force demo with threshold
 real_uname = "WisdomHaki"
-real_pword = "Robin@321&#"
+real_password = "Robin@321&#"
 
 attempts = 0
 threshold = 3
@@ -37,7 +37,7 @@ threshold = 3
 while attemps < threshold:
     username = input("Enter Username: ")
     password = input("Enter Password: ")
-    if real_uname == username and real_pword == password:
+    if real_uname == username and real_password == password:
         print("Login Successful")
         break
     else:
@@ -46,3 +46,13 @@ while attemps < threshold:
 
 if attempts == threshold:
     print("Account Locked")
+
+# Brute_force Simulation.
+wordlist = ["123456", "password", "Robin@321&#", "kingV@333$", "admin"]
+for passwd in wordlist:
+    print(f"Trying password: {passwd}")
+    if passwd == real_password:
+        print(f"Password found! The Password is: {passwd}")
+        break
+    else:
+        print(f"The password doesn't exist in the wordlist try another breached worldlist\nFailed to find {passwd}!")
