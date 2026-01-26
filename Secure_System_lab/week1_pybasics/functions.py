@@ -55,41 +55,6 @@ print(string_without_spaces.lower())
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # learning Phase...
 # def greet(name):
 #     print(f"Hello {name}!") # Static way of showing the res.
