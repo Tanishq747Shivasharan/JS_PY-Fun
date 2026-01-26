@@ -1,23 +1,49 @@
-real_uname = "WisdomHaki"
-real_password = "Robin@321&#"
+real_uname = input("Enter your username: ")
 
-global_fun_counter = 0
+while True:
+    real_password = input("Enter your password: ")
 
-def reusable_code(name, password):
-    global global_fun_counter
-    global_fun_counter += 1
-    if name == real_uname and password == real_password:
-        print(f"Welcome {name}! Login successful")
-        return True
-    else:
-        print(f"Login failed for {name}")
-        return False
+    # Check empty
+    if real_password == "":
+        print("Password cannot be empty!")
+        continue
 
-if  __name__ == "__main__":
-    # Test users
-    reusable_code(real_uname, real_password)
-    reusable_code("Tanishq", "1234")
-    print(f"The Function has been called for {global_fun_counter} times.")
+    # Check length
+    if len(real_password) < 6:
+        print("Password must be at least 6 characters long!")
+        continue
+
+    # Check if password is only numbers
+    if real_password.isdigit():
+        print("Password cannot be only numbers!")
+        continue
+
+    # If all conditions passed
+    print("Password accepted!")
+    break
+        
+string_without_spaces = real_uname.replace(" ", "")
+
+print(string_without_spaces.lower())
+
+
+# global_fun_counter = 0
+
+# def reusable_code(name, password):
+#     global global_fun_counter
+#     global_fun_counter += 1
+#     if name == real_uname and password == real_password:
+#         print(f"Welcome {name}! Login successful")
+#         return True
+#     else:
+#         print(f"Login failed for {name}")
+#         return False
+
+# if  __name__ == "__main__":
+#     # Test users
+#     reusable_code(real_uname, real_password)
+#     reusable_code("Tanishq", "1234")
+#     print(f"The Function has been called for {global_fun_counter} times.")
 
 
 
