@@ -33,12 +33,22 @@
 
 # Dictionary based authentication.
 users = {
-    "admin": "1234",
+    "admin" : "1234",
     "tanishq": "pass"
 }
 
-for username, password in users.items():
-    if username == "admin" or username == "tanishq" and password == "1234" or password == "pass":
-        print("Access granted!")
-    else:
-        print("Access denied!")
+uname = input("Enter the username: ")
+pwd = input("Enter the password: ")
+
+if uname in users and users[uname] == pwd:
+    print("Access granted!")
+else:
+    print("Access denied!")
+
+if uname not in users:
+    users[uname] = pwd
+    print("Account created!")
+else:
+    print("User already exists!")
+
+print(users)
