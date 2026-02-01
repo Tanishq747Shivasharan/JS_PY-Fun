@@ -22,3 +22,9 @@ else:
         wf.write(f"Failed login attempt for {uname}\n") 
         wf.write(f"Failed attempt by {uname} at {timestamp}\n")
         print("User log activity saved in logs.txt")
+        
+line_counter = 0
+with open("logs.txt", "r") as crf:
+    for line in crf:
+        line_counter += 1
+    print("Total number of activities: ", line_counter)
