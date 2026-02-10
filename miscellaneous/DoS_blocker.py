@@ -5,13 +5,13 @@ from collections import defaultdict
 from scapy.all import sniff, IP
 
 THRESHOLD = 35
-print(f"THRESHOLD: "{THRESHOLD})
+print(f"THRESHOLD: {THRESHOLD}")
 
 def packet_callback(packet):
     src_ip = packet[IP].src
     packet_count[src_ip] += 1
     current_time = time.time()
-    time_intervel = current_time - start_time[0
+    time_intervel = current_time - start_time[0]
     if time_intervel >= 1:
         for ip, count in list(packet_count.items()):
             if count > THRESHOLD:
