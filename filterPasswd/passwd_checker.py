@@ -1,29 +1,27 @@
 import re
+import getpass
 
-def check_weak_passwd(passwd):
-    rules = [
-        {
-            "message": "Password must be at least 8 characters long",
-            "test": lambda pwd: len(pwd) >= 8
-        },
-        {
-            "message": "Password must contain an uppercase letter",
-            "test": lambda pwd: bool(re.search(r"[A-Z]", pwd))
-        },
-        {
-            "message": "Password must contain a lowercase letter",
-            "test": lambda pwd: bool(re.search(r"[a-z]", pwd))
-        },
-        {
-            "message": "Password must contain a number",
-            "test": lambda pwd: bool(re.search(r"[0-9]", pwd))
-        },
-        {
-            "message": "Password must contain a special character",
-            "test": lambda pwd: bool(re.search(r"[@$!%*?&]", pwd))
-        }
-    ]
+print("Enter Password:")
+password = getpass.getpass()   # Hides password while typing
 
-    failed_rules = list(filter(lambda rule: not rule["test"](passwd), rules))
+# Check length
+if len(password) <= 8:
+    print("Password must be more than 8 characters.")
+    exit()
 
-    return [rule["message"] for rule in failed_rules] 
+# Check for at least one letter
+if not re.search(r"[A-Za-z]", password):
+    print("Password must contain at least one letter.")
+    exit()
+
+# Check for at least one digit
+if not re.search(r"[0-9]", password):
+    print("Password must contain at least one digit.")
+    exit()
+
+# Check for at least one special character (#, %, &, @)
+if not re.search(r"[#%@&]", password):
+    print("Password must contain at least one special character (#, %, &, @).")
+    exit()
+
+print("Strong Password! Authentication Successful.")
