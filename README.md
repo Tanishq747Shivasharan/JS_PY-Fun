@@ -37,11 +37,12 @@ This repository follows a **90-day structured cybersecurity curriculum** divided
 - **Web Scraping**: Data extraction and analysis tools
 - **OSINT Tools**: Open source intelligence gathering
 
-### **Phase 5: Cryptography & Security Analysis (Days 61-75)** **PARTIALLY COMPLETED**
-- **Classical Ciphers**: Rail Fence, Substitution, and Vernam cipher implementations
+### **Phase 5: Cryptography & Security Analysis (Days 61-75)** **ACTIVELY PROGRESSING**
+- **Classical Ciphers**: Caesar, Rail Fence, Columnar Transposition implementations (NIS_PR)
+- **Advanced Ciphers**: Substitution and Vernam cipher implementations (miscellaneous)
 - **Cryptographic Foundations**: Encryption/decryption with key management
-- **Hash Functions**: Password hashing and integrity verification
-- **File Security**: Integrity checking and signature detection
+- **Security Tools**: DoS protection, firewall, and password strength analysis
+- **File Security**: Integrity checking and signature detection (in progress)
 
 ### **Phase 6: SOC & Defense Tools (Days 76-90)** **PLANNED**
 - **Threat Detection**: Brute force and anomaly detection systems
@@ -54,73 +55,93 @@ This repository follows a **90-day structured cybersecurity curriculum** divided
 ## Key Achievements So Far
 
 ### **Completed Implementations**
-- **Cross-Platform Password Validation**: Identical security logic in Python CLI and React web interface
-- **Classical Cryptography Suite**: Working implementations of historical cipher algorithms
+- **Cross-Platform Password Validation**: Identical security logic in Python CLI and React web interface (NIS_PR)
+- **Classical Cryptography Suite**: Caesar, Rail Fence, Columnar Transposition, Substitution, and Vernam ciphers
 - **Authentication Framework**: Multi-user login system with security controls
 - **Modern Web Interface**: React-based password strength checker with real-time validation
-- **Security Logging**: Comprehensive failed attempt tracking and analysis
+- **Security Logging**: Comprehensive failed attempt tracking and analysis (Week 2)
+- **System Operations**: File/directory management with OS modules (Week 3)
+- **Error Handling**: Robust exception management and logging patterns
 
 ### **Currently Working On**
-- **Network Automation Tools**: IP scanning and URL validation utilities
-- **System Integration**: Command execution and batch processing scripts
-- **Error Handling**: Robust automation with comprehensive exception management
+- **Security Defense Tools**: DoS protection and firewall implementations
+- **Advanced Cryptography**: Multiple cipher implementations across different projects
+- **System Integration**: OS-level security operations and file management
+- **Access Monitoring**: Enhanced logging and intrusion detection systems
 
 ---
 
 ## Project Structure & Implementation Status
 
 ```
-├── filterPasswd/                    # Password Security Suite COMPLETE
-│   ├── main.py                        # Python CLI password validator
-│   ├── passwd_checker.py              # Core validation logic (8+ chars, mixed case, symbols)
-│   └── weak-password-checker/         # React web interface with real-time validation
-│       ├── src/App.jsx                # Interactive password strength checker
-│       ├── src/passwd_checker.js      # JavaScript validation logic (mirrors Python)
-│       └── package.json               # React + Vite + modern dependencies
+├── NIS_PR/                         # Network & Information Security Projects ACTIVE
+│   ├── passwd_checker.py             # Secure password validator with regex patterns
+│   ├── Caesar_cipher.py              # Caesar cipher encryption/decryption
+│   ├── Rail_fence.py                 # Rail fence transposition cipher
+│   ├── Columnar_transposition.py     # Columnar transposition cipher
+│   └── weak-password-checker/        # React web interface with real-time validation
+│       ├── src/App.jsx               # Interactive password strength checker
+│       ├── src/passwd_checker.js     # JavaScript validation logic
+│       └── package.json              # React + Vite dependencies
 │
 ├── miscellaneous/                   # Cryptography & Security Tools PARTIAL
 │   ├── railFence_cipher.py           # Rail fence transposition cipher
 │   ├── substitution_cipher.py        # Monoalphabetic substitution cipher
 │   ├── vernam_cipher.py              # One-time pad implementation
+│   ├── Caesar_Cipher.py              # Classical Caesar cipher
 │   ├── worm_sim.py                   # Network reconnaissance simulation
-│   ├── cli.py                        # HTTP server utilities
-│   └── Caesar_Cipher.py              # Classical Caesar cipher
+│   ├── DoS_blocker.py                # Denial of Service protection
+│   ├── firewall.py                   # Basic firewall implementation
+│   ├── pwd_Strength_Checker.py       # Password strength analysis
+│   └── cli.py                        # HTTP server utilities
 │
 ├── MEN/                            # Express.js Web Server BASIC
 │   ├── server.js                     # Basic Express server with middleware
 │   ├── package.json                  # Node.js dependencies
-│   └── [routes/, models/, etc.]      # MEN stack structure (ready for expansion)
+│   └── .env                          # Environment configuration
 │
 ├── unauthorized-access-detector/    # Access Monitoring Tools STARTED
 │   ├── js_version/script.js          # JavaScript-based access detection
-│   └── py_version/file.py            # Python logging and monitoring
+│   └── py_version/                   # Python logging and monitoring
+│       ├── file.py                   # File access monitoring
+│       └── logger_learn.py           # Logging implementation examples
 │
-├── Secure_System_lab/              # Educational Security Exercises
-│   └── week1_pybasics/               # Python fundamentals for security
-│       ├── functions.py              # Security-focused function examples
-│       ├── input_output.py           # Secure input handling
-│       └── lists_dicts.py            # Data structure security patterns
+├── Secure_System_lab/              # Educational Security Exercises EXPANDED
+│   ├── week1_pybasics/               # Python fundamentals for security
+│   │   ├── functions.py              # Security-focused function examples
+│   │   ├── input_output.py           # Secure input handling
+│   │   └── lists_dicts.py            # Data structure security patterns
+│   ├── week2_pybasics/               # Advanced Python security concepts
+│   │   ├── logger.py                 # Security logging implementation
+│   │   ├── logs.txt                  # Log file examples
+│   │   └── try_except.py             # Error handling and exception management
+│   └── week3_pybasics/               # System-level security operations
+│       └── os_modules.py             # OS module usage for file/directory operations
 │
-└── key.txt                        # Cryptographic key storage (substitution cipher)
+├── key.txt                        # Cryptographic key storage
+├── locked_users.json              # User lockout tracking
+└── logs.txt                       # Security event logging
 ```
 
 ### **Implementation Highlights**
 
 **Fully Implemented:**
-- **Password Security**: Complete validation system with both CLI and web interfaces
-- **Classical Cryptography**: Working Rail Fence, Substitution, and Vernam ciphers
+- **Password Security**: Complete validation system with both CLI and web interfaces (NIS_PR)
+- **Classical Cryptography**: Caesar, Rail Fence, Columnar Transposition, Substitution, and Vernam ciphers
 - **Web Framework**: Basic Express.js server with middleware architecture
 - **Security Fundamentals**: Input validation, authentication, and logging patterns
+- **System Operations**: OS module usage for file/directory security operations (Week 3)
+- **Error Handling**: Comprehensive exception management and logging (Week 2)
 
 **In Development:**
-- **Network Tools**: Port scanning and reconnaissance utilities
-- **Access Monitoring**: File-based logging and intrusion detection
-- **Automation Scripts**: Batch processing and system integration tools
+- **Network Security Tools**: DoS protection and firewall implementations
+- **Access Monitoring**: File-based logging and intrusion detection systems
+- **Advanced Cryptography**: Multiple cipher implementations across projects
 
-**Planned Next:**
-- **Advanced Networking**: TCP/IP client-server implementations
-- **Web Security**: HTTP analysis and OSINT tools
-- **Hash Functions**: Password hashing and file integrity systems
+**Completed Learning Modules:**
+- **Week 1**: Python fundamentals (functions, I/O, data structures)
+- **Week 2**: Advanced concepts (logging, exception handling)
+- **Week 3**: System-level operations (OS modules, file management)
 
 ---
 
@@ -146,11 +167,11 @@ This repository follows a **90-day structured cybersecurity curriculum** divided
 ### Password Security Suite
 ```bash
 # Python CLI version - Interactive password validation
-cd filterPasswd
-python main.py
+cd NIS_PR
+python passwd_checker.py
 
 # React web interface - Real-time strength analysis
-cd filterPasswd/weak-password-checker
+cd NIS_PR/weak-password-checker
 npm install
 npm run dev
 # Visit http://localhost:5173 for interactive password checker
@@ -158,19 +179,28 @@ npm run dev
 
 ### Cryptographic Tools
 ```bash
+# NIS_PR implementations
+cd NIS_PR
+python Caesar_cipher.py           # Caesar cipher encryption/decryption
+python Rail_fence.py              # Rail fence transposition cipher
+python Columnar_transposition.py  # Columnar transposition cipher
+
+# Additional cipher implementations
 cd miscellaneous
+python railFence_cipher.py        # Alternative rail fence implementation
+python substitution_cipher.py     # Monoalphabetic substitution cipher
+python vernam_cipher.py           # One-time pad (Vernam cipher)
+python Caesar_Cipher.py           # Alternative Caesar cipher
+```
 
-# Interactive Rail Fence cipher (transposition)
-python railFence_cipher.py
-
-# Substitution cipher with automatic key generation
-python substitution_cipher.py
-
-# One-time pad (Vernam cipher) - cryptographically secure
-python vernam_cipher.py
-
-# Classical Caesar cipher
-python Caesar_Cipher.py
+### Security Tools & Utilities
+```bash
+cd miscellaneous
+python DoS_blocker.py             # Denial of Service protection
+python firewall.py                # Basic firewall implementation
+python pwd_Strength_Checker.py    # Password strength analysis
+python worm_sim.py                # Network reconnaissance simulation
+python cli.py                     # HTTP utilities
 ```
 
 ### Web Server & Network Tools
@@ -189,10 +219,20 @@ python cli.py         # HTTP utilities
 
 ### Security Learning Exercises
 ```bash
+# Week 1: Python Fundamentals for Security
 cd Secure_System_lab/week1_pybasics
 python functions.py      # Security-focused function patterns
 python input_output.py   # Secure input handling examples
 python lists_dicts.py    # Data structure security patterns
+
+# Week 2: Advanced Security Concepts
+cd Secure_System_lab/week2_pybasics
+python logger.py         # Security logging implementation
+python try_except.py     # Error handling and exception management
+
+# Week 3: System-Level Security Operations
+cd Secure_System_lab/week3_pybasics
+python os_modules.py     # OS module usage for file/directory operations
 ```
 
 ---
