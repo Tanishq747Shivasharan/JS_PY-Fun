@@ -1,73 +1,116 @@
 # JS_PY-Fun: Cybersecurity Learning Journey
 
-**JS_PY-Fun** is a comprehensive 90-day cybersecurity learning journey that transforms theoretical security knowledge into practical, hands-on implementations. This repository documents my systematic progression through cybersecurity fundamentals, from basic authentication systems to advanced threat detection tools, using both **Python** and **JavaScript**.
+**JS_PY-Fun** is a comprehensive cybersecurity learning repository documenting my hands-on journey through network security and cryptography fundamentals using **Python** and **JavaScript**. This project transforms theoretical security concepts into practical implementations, featuring CLI tools, web interfaces, and security utilities that demonstrate core cybersecurity principles through code.
 
-Following a structured learning plan, this project bridges the gap between academic security concepts and real-world applications, featuring CLI tools, web interfaces, and security utilities that demonstrate core cybersecurity principles through code.
-
----
-
-## Original Learning Plan & Current Progress
-
-This repository follows a **90-day structured cybersecurity curriculum** divided into 6 phases:
-
-### **Phase 1: Python Core for Security (Days 1-15)** **COMPLETED**
-- **Authentication System*: CLI lologin with hardcoded credentials, case-insensitive validation
-- **Brute Force Protection**: 3-attempt limit system with lockout mechanisms  
-- **Input Sanitization**: Space trimming, length validation, character filtering
-- **Multi-User Systems**: List and dictionary-based user management
-- **Security Logging**: Failed attempt tracking with timestamp logging
-- **Password Strength Analysis**: Comprehensive validation engine (implemented in both Python CLI and React web interface)
-- **Account Security**: Lockout systems and role-based access control
-
-### **Phase 2: Automation & Scripting (Days 16-30)** **IN PROGRESS**
-- **System Integration**: OS module usage and command execution
-- **Network Automation**: IP scanning logic and URL validation (partially implemented)
-- **Batch Processing**: Multi-script execution and log management
-- **Error Handling**: Robust automation with retry mechanisms
-
-### **Phase 3: Networking with Python (Days 31-45)** **PLANNED**
-- **TCP/IP Fundamentals**: Client-server implementations
-- **Port Scanning**: Network reconnaissance tools
-- **Banner Grabbing**: Service identification and enumeration
-- **Network Security**: Comprehensive scanning toolkit
-
-### **Phase 4: Web Security & OSINT (Days 46-60)** **PLANNED**
-- **Web Reconnaissance**: Domain analysis and information gathering
-- **HTTP Security**: Request handling and response analysis
-- **Web Scraping**: Data extraction and analysis tools
-- **OSINT Tools**: Open source intelligence gathering
-
-### **Phase 5: Cryptography & Security Analysis (Days 61-75)** **ACTIVELY PROGRESSING**
-- **Classical Ciphers**: Caesar, Rail Fence, Columnar Transposition implementations (NIS_PR)
-- **Advanced Ciphers**: Substitution and Vernam cipher implementations (miscellaneous)
-- **Cryptographic Foundations**: Encryption/decryption with key management
-- **Security Tools**: DoS protection, firewall, and password strength analysis
-- **File Security**: Integrity checking and signature detection (in progress)
-
-### **Phase 6: SOC & Defense Tools (Days 76-90)** **PLANNED**
-- **Threat Detection**: Brute force and anomaly detection systems
-- **Security Operations**: Alert generation and incident response
-- **Defense Automation**: Comprehensive security toolkit integration
-- **Final Integration**: Complete cybersecurity defense laboratory
+From classical cryptography to modern web security, from authentication systems to network reconnaissance, this repository showcases a progressive learning path focused on understanding security through implementation.
 
 ---
 
-## Key Achievements So Far
+## Learning Journey Overview
 
-### **Completed Implementations**
-- **Cross-Platform Password Validation**: Identical security logic in Python CLI and React web interface (NIS_PR)
-- **Classical Cryptography Suite**: Caesar, Rail Fence, Columnar Transposition, Substitution, and Vernam ciphers
-- **Authentication Framework**: Multi-user login system with security controls
-- **Modern Web Interface**: React-based password strength checker with real-time validation
-- **Security Logging**: Comprehensive failed attempt tracking and analysis (Week 2)
-- **System Operations**: File/directory management with OS modules (Week 3)
-- **Error Handling**: Robust exception management and logging patterns
+This repository documents my hands-on exploration of cybersecurity fundamentals through practical implementations. The focus is on understanding security concepts by building them from scratch using Python and JavaScript.
 
-### **Currently Working On**
-- **Security Defense Tools**: DoS protection and firewall implementations
-- **Advanced Cryptography**: Multiple cipher implementations across different projects
-- **System Integration**: OS-level security operations and file management
-- **Access Monitoring**: Enhanced logging and intrusion detection systems
+### **Core Learning Areas**
+
+**Authentication & Access Control** ✅
+- Multi-user authentication system with brute force protection
+- Account lockout mechanisms after 3 failed attempts
+- Admin unlock functionality with comprehensive logging
+- JSON-based persistent storage for locked users and failed attempts
+- Timestamp-based security event tracking
+
+**Cryptography & Encryption** ✅
+- **Classical Ciphers**: Caesar, Rail Fence, Columnar Transposition, Substitution, Vernam
+- **Modern Cryptography**: Diffie-Hellman key exchange implementation
+- **Hash Functions**: SHA-256 CLI tool with file integrity verification
+- Encryption/decryption with key management
+- Understanding cryptographic foundations through implementation
+
+**Password Security** ✅
+- Cross-platform password validation (Python CLI + React web interface)
+- Real-time strength analysis with visual feedback
+- Regex-based pattern matching for security requirements
+- Interactive web UI with modern design patterns
+
+**Network Security** 🔄
+- Basic network reconnaissance and port scanning
+- IP-based firewall rule implementation
+- DoS attack detection and blocking (using Scapy)
+- Socket programming for network communication
+
+**Web Development & Security** ✅
+- Express.js server with middleware architecture
+- React-based security tools with modern UI/UX
+- Cross-platform security logic implementation
+- RESTful API patterns and routing
+
+**System Security & Logging** ✅
+- Comprehensive security event logging
+- File and directory operations with OS modules
+- JSON-based data persistence
+- Error handling and exception management
+- Unauthorized access detection and monitoring
+
+---
+
+## Key Implementations
+
+### **Completed Projects**
+
+**Password Security Suite**
+- Python CLI validator with regex patterns and secure input (getpass)
+- React web interface with real-time validation and visual strength meter
+- Identical security logic across both platforms
+- Requirements: 8+ characters, uppercase, lowercase, numbers, special characters
+
+**Authentication System**
+- Multi-user login with dictionary-based credential storage
+- 3-attempt lockout mechanism with persistent tracking
+- Admin unlock functionality for locked accounts
+- Comprehensive logging: SUCCESS, FAILED, LOCKED, BLOCKED_ATTEMPT, ADMIN_UNLOCK
+- JSON-based storage for failed attempts and locked users
+
+**Cryptography Toolkit**
+- **Caesar Cipher**: Classic shift cipher with encryption/decryption
+- **Rail Fence Cipher**: Transposition cipher with zigzag pattern
+- **Columnar Transposition**: Matrix-based transposition with padding
+- **Substitution Cipher**: Monoalphabetic substitution implementation
+- **Vernam Cipher**: One-time pad encryption
+- **Diffie-Hellman**: Secure key exchange protocol demonstration
+- **SHA-256 Tool**: CLI-based hash computation, verification, and file integrity checking
+
+**Network Security Tools**
+- **DoS Blocker**: Packet sniffing with Scapy, threshold-based blocking using iptables
+- **Firewall**: IP-based rule matching and access control simulation
+- **Network Scanner**: Basic port scanning and service detection using sockets
+
+**Web Applications**
+- **Express.js Server**: Basic middleware implementation and routing
+- **React Password Checker**: Modern UI with gradient effects and real-time feedback
+- **SHA-256 Web Tool**: HTML-based hash computation interface
+
+**Security Logging & Monitoring**
+- JSON-based structured logging with timestamps
+- Event severity tracking (INFO, WARNING, ERROR)
+- Unauthorized access detection framework
+- File-based log persistence and analysis
+
+### **Learning Lab Exercises**
+
+**Week 1: Python Fundamentals**
+- Functions, input/output, data structures
+- Security-focused programming patterns
+- Lists and dictionaries for user management
+
+**Week 2: Advanced Python Concepts**
+- Comprehensive authentication system with logging
+- Exception handling and error management
+- File I/O and JSON data persistence
+
+**Week 3: System-Level Operations**
+- OS module usage (getcwd, chdir, listdir, mkdir, remove, rename)
+- File and directory management
+- Safe file operations with existence checking
 
 ---
 
