@@ -12,39 +12,39 @@ This repository documents my hands-on exploration of cybersecurity fundamentals 
 
 ### **Core Learning Areas**
 
-**Authentication & Access Control** ✅
+**Authentication & Access Control** 
 - Multi-user authentication system with brute force protection
 - Account lockout mechanisms after 3 failed attempts
 - Admin unlock functionality with comprehensive logging
 - JSON-based persistent storage for locked users and failed attempts
 - Timestamp-based security event tracking
 
-**Cryptography & Encryption** ✅
+**Cryptography & Encryption** 
 - **Classical Ciphers**: Caesar, Rail Fence, Columnar Transposition, Substitution, Vernam
 - **Modern Cryptography**: Diffie-Hellman key exchange implementation
 - **Hash Functions**: SHA-256 CLI tool with file integrity verification
 - Encryption/decryption with key management
 - Understanding cryptographic foundations through implementation
 
-**Password Security** ✅
+**Password Security** 
 - Cross-platform password validation (Python CLI + React web interface)
 - Real-time strength analysis with visual feedback
 - Regex-based pattern matching for security requirements
 - Interactive web UI with modern design patterns
 
-**Network Security** 🔄
+**Network Security** 
 - Basic network reconnaissance and port scanning
 - IP-based firewall rule implementation
 - DoS attack detection and blocking (using Scapy)
 - Socket programming for network communication
 
-**Web Development & Security** ✅
+**Web Development & Security** 
 - Express.js server with middleware architecture
 - React-based security tools with modern UI/UX
 - Cross-platform security logic implementation
 - RESTful API patterns and routing
 
-**System Security & Logging** ✅
+**System Security & Logging** 
 - Comprehensive security event logging
 - File and directory operations with OS modules
 - JSON-based data persistence
@@ -114,329 +114,443 @@ This repository documents my hands-on exploration of cybersecurity fundamentals 
 
 ---
 
-## Project Structure & Implementation Status
+## Project Structure
 
 ```
-├── NIS_PR/                         # Network & Information Security Projects ACTIVE
-│   ├── passwd_checker.py             # Secure password validator with regex patterns
-│   ├── Caesar_cipher.py              # Caesar cipher encryption/decryption
-│   ├── Rail_fence.py                 # Rail fence transposition cipher
-│   ├── Columnar_transposition.py     # Columnar transposition cipher
-│   └── weak-password-checker/        # React web interface with real-time validation
-│       ├── src/App.jsx               # Interactive password strength checker
-│       ├── src/passwd_checker.js     # JavaScript validation logic
-│       └── package.json              # React + Vite dependencies
+├── NIS_PR/                                    # Network & Information Security Projects
+│   ├── passwd_checker.py                        # CLI password validator with regex & getpass
+│   ├── Caesar_cipher.py                         # Caesar cipher encryption/decryption
+│   ├── Rail_fence.py                            # Rail fence transposition cipher
+│   ├── Columnar_transposition.py                # Columnar transposition with padding
+│   ├── Diffie-Hellman.py                        # Key exchange protocol implementation
+│   ├── SHA256CLI.py                             # Hash computation & file integrity tool
+│   ├── SHA256.html                              # Web-based SHA-256 hash tool
+│   └── weak-password-checker/                   # React password strength analyzer
+│       ├── src/App.jsx                          # Interactive UI with strength meter
+│       ├── src/passwd_checker.js                # JavaScript validation logic
+│       └── package.json                         # React + Vite dependencies
 │
-├── miscellaneous/                   # Cryptography & Security Tools PARTIAL
-│   ├── railFence_cipher.py           # Rail fence transposition cipher
-│   ├── substitution_cipher.py        # Monoalphabetic substitution cipher
-│   ├── vernam_cipher.py              # One-time pad implementation
-│   ├── Caesar_Cipher.py              # Classical Caesar cipher
-│   ├── worm_sim.py                   # Network reconnaissance simulation
-│   ├── DoS_blocker.py                # Denial of Service protection
-│   ├── firewall.py                   # Basic firewall implementation
-│   ├── pwd_Strength_Checker.py       # Password strength analysis
-│   └── cli.py                        # HTTP server utilities
+├── miscellaneous/                             # Cryptography & Security Tools
+│   ├── Caesar_Cipher.py                         # Alternative Caesar implementation
+│   ├── railFence_cipher.py                      # Rail fence cipher variant
+│   ├── substitution_cipher.py                   # Monoalphabetic substitution
+│   ├── vernam_cipher.py                         # One-time pad (Vernam cipher)
+│   ├── DoS_blocker.py                           # Scapy-based DoS detection & blocking
+│   ├── firewall.py                              # IP-based firewall rule engine
+│   ├── pwd_Strength_Checker.py                  # Password strength analyzer
+│   ├── worm_sim.py                              # Network reconnaissance simulation
+│   └── cli.py                                   # HTTP server utilities
 │
-├── MEN/                            # Express.js Web Server BASIC
-│   ├── server.js                     # Basic Express server with middleware
-│   ├── package.json                  # Node.js dependencies
-│   └── .env                          # Environment configuration
+├── MEN/                                       # Express.js Web Server
+│   ├── server.js                                # Express server with middleware
+│   ├── package.json                             # Node.js dependencies
+│   └── .env                                     # Environment configuration
 │
-├── unauthorized-access-detector/    # Access Monitoring Tools STARTED
-│   ├── js_version/script.js          # JavaScript-based access detection
-│   └── py_version/                   # Python logging and monitoring
-│       ├── file.py                   # File access monitoring
-│       └── logger_learn.py           # Logging implementation examples
+├── unauthorized-access-detector/              # Access Monitoring Tools
+│   ├── js_version/script.js                     # JavaScript access detection
+│   └── py_version/                              # Python logging framework
+│       ├── file.py                              # File access monitoring
+│       └── logger_learn.py                      # JSON-based structured logging
 │
-├── Secure_System_lab/              # Educational Security Exercises EXPANDED
-│   ├── week1_pybasics/               # Python fundamentals for security
-│   │   ├── functions.py              # Security-focused function examples
-│   │   ├── input_output.py           # Secure input handling
-│   │   └── lists_dicts.py            # Data structure security patterns
-│   ├── week2_pybasics/               # Advanced Python security concepts
-│   │   ├── logger.py                 # Security logging implementation
-│   │   ├── logs.txt                  # Log file examples
-│   │   └── try_except.py             # Error handling and exception management
-│   └── week3_pybasics/               # System-level security operations
-│       └── os_modules.py             # OS module usage for file/directory operations
+├── Secure_System_lab/                         # Educational Security Exercises
+│   ├── week1_pybasics/                          # Python fundamentals
+│   │   ├── functions.py                         # Security-focused functions
+│   │   ├── input_output.py                      # Secure input handling
+│   │   └── lists_dicts.py                       # Data structure patterns
+│   ├── week2_pybasics/                          # Advanced security concepts
+│   │   ├── logger.py                            # Authentication with logging
+│   │   ├── logs.txt                             # Security event logs
+│   │   └── try_except.py                        # Exception handling
+│   └── week3_pybasics/                          # System operations
+│       └── os_modules.py                        # File/directory management
 │
-├── key.txt                        # Cryptographic key storage
-├── locked_users.json              # User lockout tracking
-└── logs.txt                       # Security event logging
+├── key.txt                                    # Cryptographic key storage
+├── locked_users.json                          # User lockout tracking
+└── logs.txt                                   # Security event logging
 ```
 
-### **Implementation Highlights**
+### **Implementation Status**
 
-**Fully Implemented:**
-- **Password Security**: Complete validation system with both CLI and web interfaces (NIS_PR)
-- **Classical Cryptography**: Caesar, Rail Fence, Columnar Transposition, Substitution, and Vernam ciphers
-- **Web Framework**: Basic Express.js server with middleware architecture
-- **Security Fundamentals**: Input validation, authentication, and logging patterns
-- **System Operations**: OS module usage for file/directory security operations (Week 3)
-- **Error Handling**: Comprehensive exception management and logging (Week 2)
+**Production-Ready:**
+- Password validation (CLI + Web)
+- Authentication system with lockout
+- All cipher implementations
+- SHA-256 hash tools
+- Security logging framework
 
-**In Development:**
-- **Network Security Tools**: DoS protection and firewall implementations
-- **Access Monitoring**: File-based logging and intrusion detection systems
-- **Advanced Cryptography**: Multiple cipher implementations across projects
+**Functional Prototypes:**
+- DoS blocker (requires root/admin)
+- Firewall rule engine
+- Network scanner
+- Express.js server
 
-**Completed Learning Modules:**
-- **Week 1**: Python fundamentals (functions, I/O, data structures)
-- **Week 2**: Advanced concepts (logging, exception handling)
-- **Week 3**: System-level operations (OS modules, file management)
+**Learning Exercises:**
+- Week 1-3 Python labs
+- Unauthorized access detector
+- System operations practice
 
 ---
 
-## Technologies & Frameworks
+## Technologies & Skills
 
-* **Python 3.7+** - Core security tools, cryptographic implementations, CLI utilities
-* **JavaScript (ES6+)** - Modern web interfaces, server-side logic, cross-platform validation
-* **React.js + Vite** - Interactive password strength checker with real-time feedback
-* **Express.js** - Web server framework with middleware architecture
-* **Node.js** - JavaScript runtime for server applications and network tools
-* **HTML5/CSS3** - Modern, responsive web interfaces
-* **Git** - Version control and project management
+**Languages & Runtimes**
+- Python 3.7+ (Core security tools, cryptography, CLI utilities)
+- JavaScript ES6+ (Web interfaces, server-side logic)
+- Node.js (Server applications, network tools)
+
+**Frameworks & Libraries**
+- React.js + Vite (Interactive security tools)
+- Express.js (Web server, middleware)
+- Scapy (Packet sniffing, network analysis)
+
+**Security Concepts Implemented**
+- Authentication & authorization
+- Brute force protection
+- Password strength validation
+- Classical & modern cryptography
+- Hash functions & integrity checking
+- Network reconnaissance
+- DoS detection & prevention
+- Security logging & monitoring
+- Input validation & sanitization
+
+**Development Tools**
+- Git (Version control)
+- npm/Node.js (Package management)
+- JSON (Data persistence)
+- Regular expressions (Pattern matching)
 
 ---
 
 ## Getting Started
 
 ### Prerequisites
-- **Python 3.7+** for security tools and cipher implementations
-- **Node.js 16+** for JavaScript projects and React interfaces
-- **npm or yarn** for JavaScript package management
+- Python 3.7+ for security tools and cipher implementations
+- Node.js 16+ for JavaScript projects and React interfaces
+- pip for Python package management
+- npm or yarn for JavaScript packages
 
-### Password Security Suite
+### Quick Start Guide
+
+**Password Security Suite**
 ```bash
-# Python CLI version - Interactive password validation
+# Python CLI - Secure password validation with hidden input
 cd NIS_PR
 python passwd_checker.py
 
-# React web interface - Real-time strength analysis
+# React Web Interface - Real-time strength analysis
 cd NIS_PR/weak-password-checker
 npm install
 npm run dev
-# Visit http://localhost:5173 for interactive password checker
+# Visit http://localhost:5173
 ```
 
-### Cryptographic Tools
+**Cryptography Tools**
 ```bash
-# NIS_PR implementations
+# Classical ciphers
 cd NIS_PR
-python Caesar_cipher.py           # Caesar cipher encryption/decryption
-python Rail_fence.py              # Rail fence transposition cipher
-python Columnar_transposition.py  # Columnar transposition cipher
+python Caesar_cipher.py              # Caesar cipher
+python Rail_fence.py                 # Rail fence transposition
+python Columnar_transposition.py     # Columnar transposition
+python Diffie-Hellman.py             # Key exchange protocol
+
+# Hash functions
+python SHA256CLI.py                  # CLI hash tool with file integrity
 
 # Additional cipher implementations
-cd miscellaneous
-python railFence_cipher.py        # Alternative rail fence implementation
-python substitution_cipher.py     # Monoalphabetic substitution cipher
-python vernam_cipher.py           # One-time pad (Vernam cipher)
-python Caesar_Cipher.py           # Alternative Caesar cipher
+cd ../miscellaneous
+python substitution_cipher.py        # Substitution cipher
+python vernam_cipher.py              # One-time pad
 ```
 
-### Security Tools & Utilities
+**Network Security Tools**
 ```bash
 cd miscellaneous
-python DoS_blocker.py             # Denial of Service protection
-python firewall.py                # Basic firewall implementation
-python pwd_Strength_Checker.py    # Password strength analysis
-python worm_sim.py                # Network reconnaissance simulation
-python cli.py                     # HTTP utilities
+python worm_sim.py                   # Network reconnaissance
+python firewall.py                   # Firewall simulation
+sudo python DoS_blocker.py           # DoS detection (requires root)
 ```
 
-### Web Server & Network Tools
+**Web Applications**
 ```bash
-# Basic Express.js server with middleware
+# Express.js server
 cd MEN
 npm install
 node server.js
 # Visit http://localhost:3000
 
-# Network reconnaissance tools (in development)
-cd miscellaneous
-python worm_sim.py    # Network simulation
-python cli.py         # HTTP utilities
+# SHA-256 web tool
+cd NIS_PR
+# Open SHA256.html in browser
 ```
 
-### Security Learning Exercises
+**Authentication System**
 ```bash
-# Week 1: Python Fundamentals for Security
-cd Secure_System_lab/week1_pybasics
-python functions.py      # Security-focused function patterns
-python input_output.py   # Secure input handling examples
-python lists_dicts.py    # Data structure security patterns
-
-# Week 2: Advanced Security Concepts
 cd Secure_System_lab/week2_pybasics
-python logger.py         # Security logging implementation
-python try_except.py     # Error handling and exception management
+python logger.py
+# Test with: admin/1234 or tanishq/pass
+# Try failed attempts to see lockout mechanism
+```
 
-# Week 3: System-Level Security Operations
-cd Secure_System_lab/week3_pybasics
-python os_modules.py     # OS module usage for file/directory operations
+**Security Logging Framework**
+```bash
+cd unauthorized-access-detector/py_version
+python logger_learn.py
+# Creates structured JSON logs with timestamps
 ```
 
 ---
 
-## Security Focus & Learning Outcomes
+## Learning Philosophy
 
-This repository emphasizes **practical cybersecurity education** through hands-on implementations:
+> **"Security through implementation - building cryptographic concepts from scratch creates deeper understanding than using libraries alone."**
 
-### **Core Security Concepts Covered**
-- **Authentication & Authorization**: Multi-user systems, role-based access, session management
-- **Input Validation & Sanitization**: Robust password checking, XSS prevention, injection protection
-- **Cryptographic Implementation**: Classical and modern cipher algorithms, key management
-- **Network Security**: Port scanning, reconnaissance, traffic analysis (planned)
-- **Secure Coding Practices**: Error handling, logging, data protection
-- **Cross-Platform Security**: Consistent security logic across Python and JavaScript
+### My Approach to Learning Cybersecurity
 
-### **Skills Developed Through Implementation**
-* **Cryptographic Algorithms** - Deep understanding through from-scratch implementations
-* **Security Validation** - Comprehensive input validation and strength assessment
-* **Cross-Language Development** - Translating security logic between Python and JavaScript
-* **Modern Web Security** - Building secure, responsive interfaces for security tools
-* **Network Programming** - Basic network scanning and monitoring techniques (in progress)
-* **Functional Security Programming** - Security-focused applications of advanced programming concepts
+**Hands-On First**
+- Build it to understand it deeply
+- Implement algorithms from scratch before using libraries
+- Learn by doing, not just reading
 
-### **Real-World Applications**
-- **Password Security**: Enterprise-grade validation systems
-- **Cryptographic Tools**: Educational and research applications
-- **Network Monitoring**: Basic intrusion detection and system monitoring
-- **Web Security**: Secure authentication and session management
-- **Automation**: Security-focused scripting and batch processing
+**Cross-Platform Mastery**
+- Implement the same security logic in Python and JavaScript
+- Understand language-specific security considerations
+- Build both CLI and web interfaces for the same functionality
+
+**Security-First Thinking**
+- Consider security implications in every design decision
+- Understand attack vectors by implementing defenses
+- Learn from failures and iterate
+
+**Progressive Complexity**
+- Start with fundamentals (authentication, basic ciphers)
+- Build on solid foundations incrementally
+- Add sophistication as understanding deepens
+
+**Documentation Through Code**
+- Write clean, readable implementations
+- Code that teaches concepts to others
+- Comments that explain the "why" not just the "what"
+
+### What I've Learned So Far
+
+**Technical Skills**
+- Cryptographic algorithm implementation (classical & modern)
+- Authentication system design with security controls
+- Network programming with sockets
+- Web security patterns and validation
+- Cross-platform security logic
+- Structured logging and monitoring
+- Error handling and exception management
+
+**Security Concepts**
+- Defense in depth (multiple layers of security)
+- Principle of least privilege
+- Input validation and sanitization
+- Secure password storage and validation
+- Brute force protection mechanisms
+- Network reconnaissance and defense
+- Hash functions and integrity verification
+
+**Development Practices**
+- Test security features thoroughly
+- Handle edge cases and errors gracefully
+- Log security events comprehensively
+- Use secure coding patterns (getpass, regex validation)
+- Persist security data properly (JSON, file I/O)
 
 ---
 
-## Learning Philosophy & Approach
+## Real-World Applications
 
-> **"Security through understanding - implementing cryptographic concepts builds deeper knowledge than just using libraries."**
+These implementations demonstrate practical security concepts used in production systems:
 
-### **My Learning Methodology**
-* **Hands-on Implementation First** - Build it to truly understand it
-* **Security-First Thinking** - Every design decision considers security implications
-* **Cross-Platform Mastery** - Consistent implementation across Python and JavaScript
-* **Progressive Complexity** - Start simple, add sophistication incrementally
-* **Documentation Through Code** - Clean, readable implementations that teach concepts
-* **Learn from Failures** - Iterate and improve based on testing and feedback
+**Password Validation**
+- Enterprise password policies
+- User registration systems
+- Security compliance requirements
 
-### **Current Learning Focus (Phase 2)**
-- **Network Automation**: Building robust IP scanning and URL validation tools
-- **System Integration**: Seamless command execution and batch processing
-- **Error Handling**: Comprehensive exception management and recovery
-- **Performance Optimization**: Efficient algorithms for security operations
+**Authentication & Lockout**
+- Brute force attack prevention
+- Account security mechanisms
+- Admin management tools
 
-### **Next Learning Milestones**
-- **TCP/IP Programming**: Client-server implementations for network security
-- **Advanced Cryptography**: Hash functions, digital signatures, PKI concepts
-- **Web Application Security**: OWASP Top 10, secure coding practices
-- **Threat Detection**: Anomaly detection, behavioral analysis, SOC tools
+**Cryptography**
+- Understanding encryption fundamentals
+- Educational cryptography tools
+- Historical cipher analysis
+
+**Network Security**
+- Basic intrusion detection
+- Firewall rule implementation
+- Network monitoring and analysis
+
+**Security Logging**
+- Audit trail creation
+- Incident response data
+- Compliance and forensics
 
 ---
 
 ## Who This Repository Is For
 
-* **Cybersecurity Students** - Practical implementations of theoretical concepts
-* **Self-Taught Developers** - Structured learning path with hands-on projects
-* **Security Enthusiasts** - Real-world security tool development
-* Educators & Trainers** - Teaching materials for security programming
-* **Career Changers** - Portfolio demonstrating security programming skills
-* **Fellow Learners** - Anyone following a similar cybersecurity learning journ
+**Cybersecurity Students**
+- Practical implementations of theoretical concepts
+- Hands-on learning materials
+- Code examples for security algorithms
+
+**Self-Taught Developers**
+- Structured learning path through security topics
+- Progressive complexity in implementations
+- Real projects to build and experiment with
+
+**Security Enthusiasts**
+- Understanding security through implementation
+- Cross-platform security development
+- Building security tools from scratch
+
+**Career Changers**
+- Portfolio demonstrating security programming skills
+- Practical experience with security concepts
+- Evidence of hands-on learning
+
+**Fellow Learners**
+- Inspiration for your own security projects
+- Code to study and learn from
+- Ideas for hands-on practice
 
 ---
 
-## Progress Tracking & Milestones
+## Future Learning Goals
 
-### **Completed Milestones**
-- **Day 1-15**: Python security fundamentals and authentication systems
-- **Password Security**: Cross-platform validation with CLI and web interfaces
-- **Classical Cryptography**: Rail Fence, Substitution, and Vernam cipher implementations
-- **Web Framework**: Basic Express.js server with middleware architecture
+**Short-Term**
+- Advanced network scanning tools
+- Web application security testing
+- More modern cryptographic implementations
+- Enhanced logging and monitoring systems
 
-### **Current Sprint (Days 16-30)**
-- **Network Automation**: IP scanning logic and URL validation
-- **System Integration**: Command execution and batch processing
-- **Error Handling**: Robust automation with retry mechanisms
+**Medium-Term**
+- Penetration testing tools
+- Vulnerability scanners
+- Security automation scripts
+- API security implementations
 
-### **Upcoming Phases**
-- **Phase 3 (Days 31-45)**: TCP/IP networking and port scanning tools
-- **Phase 4 (Days 46-60)**: Web security and OSINT implementations
-- **Phase 5 (Days 61-75)**: Advanced cryptography and file security
-- **Phase 6 (Days 76-90)**: SOC tools and comprehensive defense systems
+**Long-Term**
+- Complete SOC (Security Operations Center) toolkit
+- Threat detection and response systems
+- Machine learning for anomaly detection
+- Comprehensive security framework integration
 
 ---
 
-## Learning Together
+## Contributing & Learning Together
 
-This repository documents my personal cybersecurity learning journey, but **learning is better together!**
+This repository documents my personal cybersecurity learning journey, but learning is always better together!
 
-### **Contributions Welcome**
-- Security-focused suggestions and improvements
-- Code reviews and optimization recommendations
+**Ways to Engage**
+- ⭐ Star this repository to follow my learning progress
+- 🔀 Fork and experiment with your own implementations
+- 💡 Suggest improvements or additional security features
+- 🐛 Report bugs or security issues
+- 📚 Share learning resources that have helped you
+- 🤝 Connect if you're on a similar learning path
+
+**Contribution Guidelines**
+- Security-focused suggestions welcome
+- Code reviews and optimization recommendations appreciated
 - Additional cipher implementations or security tools
-- Documentation improvements and learning resources
-- Bug reports and security vulnerability disclosures
+- Documentation improvements
+- Educational resources and tutorials
 
-### **Connect & Collaborate**
-- **Star this repository** to follow my learning progress
-- **Fork and experiment** with your own security implementations
-- **Share your learning journey** - I'd love to connect with fellow learners
-- **Suggest improvements** - constructive feedback always appreciated
-
-**Important Note**: All tools are for **educational purposes only**. Use responsibly and ethically in accordance with applicable laws and regulations.
-
----
-
-## Learning Resources That Have Helped
-
-- **Hands-on Cryptography**: Implementing algorithms from scratch for deep understanding
-- **Cross-Language Programming**: Building identical logic in Python and JavaScript
-- **Security-First Development**: Considering security implications in every design decision
-- **Progressive Learning**: Building complexity incrementally with solid foundations
-- **Community Learning**: Engaging with cybersecurity communities and forums
+**Important Notes**
+- All tools are for **educational purposes only**
+- Use responsibly and ethically
+- Follow applicable laws and regulations
+- Never use these tools on systems you don't own or have permission to test
+- Some tools (like DoS_blocker.py) require root/admin privileges
 
 ---
 
-**Ready to Start Your Own Journey?**
+## Learning Resources
 
-Consider starring ⭐ this repository to follow along with my cybersecurity learning progress and find inspiration for your own security-focused projects!
+**What Has Helped Me**
+- Implementing algorithms from scratch
+- Building the same functionality in multiple languages
+- Reading security documentation and RFCs
+- Experimenting with different approaches
+- Learning from failures and debugging
+- Engaging with cybersecurity communities
+
+**Recommended Practice**
+- Start with authentication and password security
+- Implement classical ciphers to understand encryption
+- Build CLI tools before web interfaces
+- Add logging to understand program flow
+- Test edge cases and error conditions
+- Read and understand existing security code
+
+---
+
+## Project Highlights
+
+**Most Valuable Learning Experiences**
+
+1. **Authentication System** - Understanding brute force protection and lockout mechanisms
+2. **Cross-Platform Password Validation** - Implementing identical logic in Python and JavaScript
+3. **Diffie-Hellman Key Exchange** - Grasping public key cryptography fundamentals
+4. **SHA-256 Implementation** - Understanding hash functions and integrity verification
+5. **DoS Blocker** - Learning packet analysis and network security
+6. **Security Logging** - Building comprehensive audit trails
+
+**Code I'm Most Proud Of**
+- Clean, readable cipher implementations
+- Robust authentication with persistent storage
+- Modern React UI with real-time validation
+- Comprehensive error handling in logger.py
+- Cross-platform security logic consistency
+
+---
+
+## Connect & Collaborate
+
+I'm always interested in connecting with fellow learners and security enthusiasts!
+
+**Let's Learn Together**
+- Share your own security learning projects
+- Discuss implementation approaches
+- Exchange learning resources
+- Collaborate on security tools
+- Build a community of learners
+
+**Feedback Welcome**
+- Constructive code reviews
+- Security best practices
+- Performance optimizations
+- Better implementation approaches
+- Learning resource recommendations
+
+---
+
+## Acknowledgments
+
+This learning journey has been shaped by:
+- Open source security tools and documentation
+- Cybersecurity communities and forums
+- Educational resources and tutorials
+- Trial, error, and persistence
+- The principle that the best way to learn is by doing
+
+---
+
+**Ready to Start Your Own Security Learning Journey?**
+
+Star ⭐ this repository to follow along with my progress and find inspiration for your own hands-on security projects!
 
 **Happy Learning & Secure Coding!**  
 *Learn. Implement. Secure. Share. Repeat.*
 
 ---
 
-*Last Updated: January 2025 | Learning Progress: Phase 2 (Days 16-30) | Next Mileston
-- Password validation across Python and JavaScript
-- Classical cipher implementations (Rail Fence, Substitution, Vernam)
-- Basic network reconnaissance tools
-- React-based security interfaces with real-time validation
-
----
-
-## Learning Together
-
-This repository documents my personal learning journey, but I believe in learning together!
-Security-focused suggestions, improvements to cryptographic implementations, and constructive feedback are always welcome.
-
-**Please note:** All tools are for educational purposes only. Use responsibly and ethically.
-
-**Learning Resources I've Found Helpful:**
-- Hands-on cryptography implementation
-- Cross-language programming practice
-- Security-first development mindset
-- Building both CLI and web interfaces
-
----
-
-## If You're on a Similar Journey
-
-Consider starring ⭐ the repository to follow along with my cybersecurity learning progress and maybe find inspiration for your own projects!
-
-Feel free to reach out if you're working on similar learning goals - I'd love to connect with fellow learners.
-
----
-
-**Happy Learning & Secure Coding!**   
-*Learn. Implement. Secure. Share. Repeat.*
+*Last Updated: March 2026*  
+*Focus: Network Security & Cryptography with Python and JavaScript*  
+*Status: Active Learning & Development*
