@@ -23,3 +23,11 @@ BLOCKED_ATTEMPT | user=manya | time=23:11:23
 SUCCESS | user=admin | time=23:12:27
 ADMIN_UNLOCK | admin=admin | target=manya | time=23:12:27
 FAILED | user=manya | time=23:12:55
+FAILED | user=aryan | time=18:39:50
+SUCCESS | user=admin | time=18:40:32
+FAILED | user=aryan | time=18:41:00
+LOCKED | user=aryan | time=18:41:12
+BLOCKED_ATTEMPT | user=aryan | time=18:41:21
+SUCCESS | user=admin | time=18:41:43
+ADMIN_UNLOCK | admin=admin | target=aryan | time=18:41:43
+FAILED | user=aryan | time=18:42:17
