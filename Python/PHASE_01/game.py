@@ -1,30 +1,48 @@
 import random
 
-# Welcome Screen and Setpu
+# Welcome Screen and Setpu.
 def welcome():
     print("----****WELCOM****----")
     print("-----Network Clash-----")
-    print("A similar game where each element beats 2 and loses to 2 - perfectly balanced like Rock-Paper-Scissors-Lizard-Spoke!")
+    print("A game where each element beats 2 and loses to 2\n- perfectly balanced like Rock-Paper-Scissors-Lizard-Spoke!")
     print("-----**********-----")
 
-def gameplay_operators():
-    player1_name = input("Enter Player 1 name: ")
-    game_mode = input("1. For Player vs Player\n 2. For Player vs Computer\n Enter your choice: ")
-    match game_mode:
-        case 1:
-            print("You have choose Player vs Computer(PvC) mode!")
-        case 2:
-            print("You have choose Player vs Player(PvP) mode!")
+# Setup Game
+def gameplay_setup():
+    player1 = input("Enter Player 1 name: ")
+    
+    game_mode = int(input("1. PvP\n2. PvC\nEnter choice: "))
 
-    if game_mode == 2:
-        player2_name = input("Enter player 2 name: ")
+    if game_mode == 1:
+        player2 = input("Enter Player 2 name: ")
     else:
-        player2_name = "Computer"
+        player2 = "Computer"
 
-    total_rounds = input("How many rounds do you want to play? ")
+    rounds = int(input("Enter number of rounds: "))
 
-def game_data():
-    elements = [virus, firewall, packet, encryption, hacker]
+    return player1, player2, rounds, game_mode
+
+# Game Data
+elements = ["virus", "firewall", "packet", "encryption", "hacker"]
+
+rules = {
+    "virus": ["packet", "encryption"],
+    "firewall": ["virus", "hacker"],
+    "packet": ["firewall", "encryption"],
+    "encryption": ["hacker", "virus"],
+    "hacker": ["packet", "firewall"]
+}
+
+# Decide Winner
+def decide_winner(p1_choice, p2_choice):
+    if p1_choice == p2_choice:
+        return "draw"
+    elif p2_choice in rules[p1_choice]:
+        return "player1"
+    else:
+        return "player2"
 
 if __name__ == __main__:
     welcome()
+    gameplay_operators()
+    game_data()
