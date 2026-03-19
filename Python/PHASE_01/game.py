@@ -42,7 +42,39 @@ def decide_winner(p1_choice, p2_choice):
     else:
         return "player2"
 
-if __name__ == __main__:
+# Main Game Loop
+def play_game():
+    p1, p2, rounds, mode = gameplay_setup()
+
+    score1 = 0
+    score2 = 0
+
+    for i in range(rounds):
+        print(f"\nRound {i+1}")
+
+        p1_choice = input(f"{p1} choose: ").lower()
+
+        if mode == 2:
+            p2_choice = random.choice(elements)
+            print(f"{p2} chose: {p2_choice}")
+        else:
+            p2_choice = input(f"{p2} choose: ").lower()
+
+        result = decide_winner(p1_choice, p2_choice)
+
+        if result == "player1":
+            score1 += 1
+            print(f"{p1} wins this round!")
+        elif result == "player2":
+            score2 += 1
+            print(f"{p2} wins this round!")
+        else:
+            print("Draw!")
+
+    print("\n--- Final Result ---")
+    print(p1, ":", score1)
+    print(p2, ":", score2)
+
+if __name__ == '__main__':
     welcome()
-    gameplay_operators()
-    game_data()
+    play_game()
