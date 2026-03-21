@@ -1,6 +1,6 @@
 import random
 import os  
-
+import getpass
 
 def welcome():
     print("=" * 40)
@@ -35,8 +35,8 @@ flavor = {
 
 def get_choice(player_name):
     print(f"\n  Elements: {', '.join(elements)}")
-    while True:                          
-        choice = input(f"  {player_name}, enter your choice: ").lower().strip()
+    while True:
+        choice = getpass.getpass(f" {player_name}, enter your choice (hidden): ").lower().strip()                          
         if choice in elements:
             return choice                
         else:
