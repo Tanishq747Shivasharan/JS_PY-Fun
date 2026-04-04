@@ -1,0 +1,10 @@
+COMMON_PORTS = [21, 22, 80, 443]
+
+RISK_WEIGHTS = {
+    21: 10,
+    22: 10,
+    80: 5,
+    443: 5
+}
+
+DEFAULT_PROTOCOL = "TCP"
