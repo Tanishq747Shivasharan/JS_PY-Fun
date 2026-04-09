@@ -33,6 +33,7 @@ This repository documents my hands-on exploration of cybersecurity fundamentals 
 - Interactive web UI with modern design patterns
 
 **Network Security** 
+- Modular network auditor with OOP design, risk scoring, and unit tests
 - Basic network reconnaissance and port scanning
 - IP-based firewall rule implementation
 - DoS attack detection and blocking (using Scapy)
@@ -56,6 +57,23 @@ This repository documents my hands-on exploration of cybersecurity fundamentals 
 ## Key Implementations
 
 ### **Completed Projects**
+
+**Python PHASE 01 — Learning Path**
+- 18 structured exercises across three modules: Foundation & Data Handling, Working with Collections, and Logic, Functions & Objects
+- Covers variables, type casting, operators, string methods, lists, tuples, dictionaries, sets, functions, closures, loops, classes, inheritance, modules, list comprehension, and exception handling
+- All exercises are framed around security-relevant scenarios (IP inventories, port maps, threat models, log parsers)
+
+**PROJECT 01 — Network Auditor**
+- Modular OOP tool that loads target ports, wraps them as typed Service objects, and computes a risk score for a TargetSystem
+- Configurable risk weights and port list via `config.py`
+- Full unit test suite covering Scanner, Service, and TargetSystem
+- Demonstrates class design, separation of concerns, and configuration management
+
+**PROJECT 02 — CLI Calculator**
+- Interactive command-line calculator with a clean loop-based interface
+- Handles addition, subtraction, multiplication, and division
+- Graceful error handling for invalid input, unknown operators, and zero division
+- Clean integer/float display formatting
 
 **Password Security Suite**
 - Python CLI validator with regex patterns and secure input (getpass)
@@ -97,72 +115,106 @@ This repository documents my hands-on exploration of cybersecurity fundamentals 
 
 ### **Learning Lab Exercises**
 
-**Week 1: Python Fundamentals**
-- Functions, input/output, data structures
-- Security-focused programming patterns
-- Lists and dictionaries for user management
+**PHASE 01 — Foundation & Data Handling (Exercises 01-06)**
+- Variables, expressions, data types, type checking
+- Casting and type conversion
+- Operators, logic, PEMDAS precedence
+- Ternary operator for conditional responses
 
-**Week 2: Advanced Python Concepts**
-- Comprehensive authentication system with logging
-- Exception handling and error management
-- File I/O and JSON data persistence
+**PHASE 01 — Working with Collections (Exercises 07-11)**
+- String methods and slicing for log parsing
+- Lists and list methods for IP inventory management
+- Tuples and immutability with server coordinates
+- Dictionaries for port-to-service mapping
+- Sets and intersection for unique IP hit detection
 
-**Week 3: System-Level Operations**
-- OS module usage (getcwd, chdir, listdir, mkdir, remove, rename)
-- File and directory management
-- Safe file operations with existence checking
+**PHASE 01 — Logic, Functions & Objects (Exercises 12-18)**
+- Functions, scope, and default parameters
+- Closures and nested functions for access tracking
+- For and while loops for port sweeping
+- Classes and inheritance for threat modeling
+- Standard library modules (math) for entropy calculation
+- List comprehension for threat score filtering
+- Exception handling for safe file and arithmetic operations
 
 ---
 
 ## Project Structure
 
 ```
+├── Python/                                    # Python Learning Path
+│   └── PHASE_01/                              # Phase 01 — OOP, Data Structures & Security Tooling
+│       ├── Foundation & Data Handling/        # Exercises 01-06: Core Python fundamentals
+│       │   ├── 01_system_identity.py          # Variables & assignment
+│       │   ├── 02_disk_math.py                # Expressions & statements
+│       │   ├── 03_input_audit.py              # Data types & type checking
+│       │   ├── 04_port_cast.py                # Casting & type conversion
+│       │   ├── 05_policy_check.py             # Operators, logic & PEMDAS
+│       │   └── 06_auto_response.py            # Ternary operator
+│       ├── Working with Collections/          # Exercises 07-11: Data structures
+│       │   ├── 07_log_parser.py               # String methods & slicing
+│       │   ├── 08_ip_inventory.py             # Lists & list methods
+│       │   ├── 09_server_coords.py            # Tuples & immutability
+│       │   ├── 10_port_map.py                 # Dictionaries & .get() lookups
+│       │   └── 11_unique_hits.py              # Sets & intersection operations
+│       ├── Logic, Functions & Objects/        # Exercises 12-18: Functions, OOP & control flow
+│       │   ├── 12_report_tool.py              # Functions & scope
+│       │   ├── 13_access_tracker.py           # Closures & nested functions
+│       │   ├── 14_sweep_iterator.py           # For & while loops
+│       │   ├── 15_threat_model.py             # Classes & inheritance
+│       │   ├── 16_crypto_check.py             # Modules & standard library
+│       │   ├── 17_threat_filter.py            # List comprehension
+│       │   └── 18_fail_safe.py                # Exception handling
+│       ├── PROJECT_01_network_auditor/        # Modular network audit tool
+│       │   ├── main.py                        # Entry point — full audit pipeline
+│       │   ├── config.py                      # Ports, risk weights, protocol defaults
+│       │   ├── core/
+│       │   │   ├── scanner.py                 # Loads & shuffles target ports
+│       │   │   ├── service.py                 # Represents a single open port
+│       │   │   └── target_system.py           # Aggregates services, scores risk
+│       │   ├── tests/
+│       │   │   ├── test_scanner.py
+│       │   │   ├── test_service.py
+│       │   │   └── test_target_system.py
+│       │   └── README.md
+│       ├── PROJECT_02_CLI_calc/               # CLI calculator with error handling
+│       │   └── main.py                        # Interactive calculator loop
+│       └── game.py                            # Standalone game script
+│
 ├── NIS_PR/                                    # Network & Information Security Projects
-│   ├── passwd_checker.py                        # CLI password validator with regex & getpass
-│   ├── Caesar_cipher.py                         # Caesar cipher encryption/decryption
-│   ├── Rail_fence.py                            # Rail fence transposition cipher
-│   ├── Columnar_transposition.py                # Columnar transposition with padding
-│   ├── Diffie-Hellman.py                        # Key exchange protocol implementation
-│   ├── SHA256CLI.py                             # Hash computation & file integrity tool
-│   ├── SHA256.html                              # Web-based SHA-256 hash tool
-│   └── weak-password-checker/                   # React password strength analyzer
-│       ├── src/App.jsx                          # Interactive UI with strength meter
-│       ├── src/passwd_checker.js                # JavaScript validation logic
-│       └── package.json                         # React + Vite dependencies
+│   ├── passwd_checker.py                      # CLI password validator with regex & getpass
+│   ├── Caesar_cipher.py                       # Caesar cipher encryption/decryption
+│   ├── Rail_fence.py                          # Rail fence transposition cipher
+│   ├── Columnar_transposition.py              # Columnar transposition with padding
+│   ├── Diffie-Hellman.py                      # Key exchange protocol implementation
+│   ├── SHA256CLI.py                           # Hash computation & file integrity tool
+│   ├── SHA256.html                            # Web-based SHA-256 hash tool
+│   └── weak-password-checker/                 # React password strength analyzer
+│       ├── src/App.jsx                        # Interactive UI with strength meter
+│       ├── src/passwd_checker.js              # JavaScript validation logic
+│       └── package.json                       # React + Vite dependencies
 │
 ├── miscellaneous/                             # Cryptography & Security Tools
-│   ├── Caesar_Cipher.py                         # Alternative Caesar implementation
-│   ├── railFence_cipher.py                      # Rail fence cipher variant
-│   ├── substitution_cipher.py                   # Monoalphabetic substitution
-│   ├── vernam_cipher.py                         # One-time pad (Vernam cipher)
-│   ├── DoS_blocker.py                           # Scapy-based DoS detection & blocking
-│   ├── firewall.py                              # IP-based firewall rule engine
-│   ├── pwd_Strength_Checker.py                  # Password strength analyzer
-│   ├── worm_sim.py                              # Network reconnaissance simulation
-│   └── cli.py                                   # HTTP server utilities
+│   ├── Caesar_Cipher.py                       # Alternative Caesar implementation
+│   ├── railFence_cipher.py                    # Rail fence cipher variant
+│   ├── substitution_cipher.py                 # Monoalphabetic substitution
+│   ├── vernam_cipher.py                       # One-time pad (Vernam cipher)
+│   ├── DoS_blocker.py                         # Scapy-based DoS detection & blocking
+│   ├── firewall.py                            # IP-based firewall rule engine
+│   ├── pwd_Strength_Checker.py                # Password strength analyzer
+│   ├── worm_sim.py                            # Network reconnaissance simulation
+│   └── cli.py                                 # HTTP server utilities
 │
 ├── MEN/                                       # Express.js Web Server
-│   ├── server.js                                # Express server with middleware
-│   ├── package.json                             # Node.js dependencies
-│   └── .env                                     # Environment configuration
+│   ├── server.js                              # Express server with middleware
+│   ├── package.json                           # Node.js dependencies
+│   └── .env                                   # Environment configuration
 │
 ├── unauthorized-access-detector/              # Access Monitoring Tools
-│   ├── js_version/script.js                     # JavaScript access detection
-│   └── py_version/                              # Python logging framework
-│       ├── file.py                              # File access monitoring
-│       └── logger_learn.py                      # JSON-based structured logging
-│
-├── Secure_System_lab/                         # Educational Security Exercises
-│   ├── week1_pybasics/                          # Python fundamentals
-│   │   ├── functions.py                         # Security-focused functions
-│   │   ├── input_output.py                      # Secure input handling
-│   │   └── lists_dicts.py                       # Data structure patterns
-│   ├── week2_pybasics/                          # Advanced security concepts
-│   │   ├── logger.py                            # Authentication with logging
-│   │   ├── logs.txt                             # Security event logs
-│   │   └── try_except.py                        # Exception handling
-│   └── week3_pybasics/                          # System operations
-│       └── os_modules.py                        # File/directory management
+│   ├── js_version/script.js                   # JavaScript access detection
+│   └── py_version/                            # Python logging framework
+│       ├── file.py                            # File access monitoring
+│       └── logger_learn.py                    # JSON-based structured logging
 │
 ├── key.txt                                    # Cryptographic key storage
 ├── locked_users.json                          # User lockout tracking
@@ -177,6 +229,8 @@ This repository documents my hands-on exploration of cybersecurity fundamentals 
 - All cipher implementations
 - SHA-256 hash tools
 - Security logging framework
+- Network Auditor (PROJECT 01) with full test suite
+- CLI Calculator (PROJECT 02)
 
 **Functional Prototypes:**
 - DoS blocker (requires root/admin)
@@ -185,7 +239,7 @@ This repository documents my hands-on exploration of cybersecurity fundamentals 
 - Express.js server
 
 **Learning Exercises:**
-- Week 1-3 Python labs
+- PHASE 01 exercises (01-18)
 - Unauthorized access detector
 - System operations practice
 
@@ -231,6 +285,29 @@ This repository documents my hands-on exploration of cybersecurity fundamentals 
 - npm or yarn for JavaScript packages
 
 ### Quick Start Guide
+
+**Python PHASE 01 — Network Auditor**
+```bash
+cd Python/PHASE_01/PROJECT_01_network_auditor
+python main.py
+
+# Run the test suite
+python -m pytest tests/
+```
+
+**Python PHASE 01 — CLI Calculator**
+```bash
+cd Python/PHASE_01/PROJECT_02_CLI_calc
+python main.py
+```
+
+**Python PHASE 01 — Exercises**
+```bash
+# Run any individual exercise directly
+python "Python/PHASE_01/Foundation & Data Handling/01_system_identity.py"
+python "Python/PHASE_01/Working with Collections/10_port_map.py"
+python "Python/PHASE_01/Logic, Functions & Objects/15_threat_model.py"
+```
 
 **Password Security Suite**
 ```bash
@@ -282,14 +359,6 @@ node server.js
 # SHA-256 web tool
 cd NIS_PR
 # Open SHA256.html in browser
-```
-
-**Authentication System**
-```bash
-cd Secure_System_lab/week2_pybasics
-python logger.py
-# Test with: admin/1234 or tanishq/pass
-# Try failed attempts to see lockout mechanism
 ```
 
 **Security Logging Framework**
@@ -495,12 +564,13 @@ This repository documents my personal cybersecurity learning journey, but learni
 
 **Most Valuable Learning Experiences**
 
-1. **Authentication System** - Understanding brute force protection and lockout mechanisms
-2. **Cross-Platform Password Validation** - Implementing identical logic in Python and JavaScript
-3. **Diffie-Hellman Key Exchange** - Grasping public key cryptography fundamentals
-4. **SHA-256 Implementation** - Understanding hash functions and integrity verification
-5. **DoS Blocker** - Learning packet analysis and network security
-6. **Security Logging** - Building comprehensive audit trails
+1. **Network Auditor (PROJECT 01)** — Applying OOP design, separation of concerns, and unit testing in a security context
+2. **Authentication System** — Understanding brute force protection and lockout mechanisms
+3. **Cross-Platform Password Validation** — Implementing identical logic in Python and JavaScript
+4. **Diffie-Hellman Key Exchange** — Grasping public key cryptography fundamentals
+5. **SHA-256 Implementation** — Understanding hash functions and integrity verification
+6. **DoS Blocker** — Learning packet analysis and network security
+7. **Security Logging** — Building comprehensive audit trails
 
 **Code I'm Most Proud Of**
 - Clean, readable cipher implementations
