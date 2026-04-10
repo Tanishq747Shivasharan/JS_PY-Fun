@@ -4,26 +4,31 @@ def check_password_strength(password):
     score = 0
     feedback = []
 
+    # Check if password is greater than 8 characters
     if len(password) >= 8:
         score += 1
     else:
         feedback.append("Use at least 8 characters")
 
-    if re.search(r'[A-Z]', password):
+    # Check if password contains atleast one Uppercase letter.
+    if re.search(r'[A-Z]', password):    # used regEx syntax --> re.search(pattern, string)
         score += 1
     else:
         feedback.append("Add at least one uppercase letter")
-
+        
+    # Check if password contains atleast one Lowercase letter.
     if re.search(r'[a-z]', password):
         score += 1
     else:
         feedback.append("Add at least one lowercase letter")
-
+    
+    # Check if password contains atleast one digit(number).
     if re.search(r'[0-9]', password):
         score += 1
     else:
         feedback.append("Add at least one number")
 
+    # Check if password contains atleast one special character.
     if re.search(r'[!@#$%^&*(),.?":{}|<>]', password):
         score += 1
     else:
