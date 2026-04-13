@@ -1,0 +1,32 @@
+name: Drip Push Commits
+
+on:
+  schedule:
+    - cron: '0 9 * * *'
+  workflow_dispatch:
+
+jobs:
+  push-next-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Configure git
+        run: |
+          git config user.name "Tanishq747Shivasharan"
+          git config user.email "tanishqshivasharan747@gmail.com"
+
+      - name: Push next unpushed commit
+        run: |
+          git fetch origin main
+          UNPUSHED=$(git log origin/main..HEAD --oneline | tail -1)
+          if [ -n "$UNPUSHED" ]; then
+            HASH=$(echo "$UNPUSHED" | awk '{print $1}')
+            echo "Pushing commit: $UNPUSHED"
+            git push origin $HASH:main
+          else
+            echo "No more commits to push. All done!"
+          fi
