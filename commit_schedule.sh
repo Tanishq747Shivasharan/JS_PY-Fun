@@ -5,64 +5,60 @@
 git config user.name "Tanishq747Shivasharan"
 git config user.email "tanishqshivasharan747@gmail.com"
 
-# Commit 1: Created file Strings: Working with Textual Data
+# Commit 1: file Objects: Log Reading and Writing
 git add .
-GIT_AUTHOR_DATE="2026-04-13T04:30:00.000Z" GIT_COMMITTER_DATE="2026-04-13T04:30:00.000Z" git commit --allow-empty -m "Created file Strings: Working with Textual Data"
+GIT_AUTHOR_DATE="2026-04-30T04:30:00.000Z" GIT_COMMITTER_DATE="2026-04-30T04:30:00.000Z" git commit --allow-empty -m "file Objects: Log Reading and Writing"
 
-# Commit 2: Created file Integers and Floats: Numeric Security Data
+# Commit 2: Slicing: Extracting Metadata
 git add .
-GIT_AUTHOR_DATE="2026-04-14T06:00:00.000Z" GIT_COMMITTER_DATE="2026-04-14T06:00:00.000Z" git commit --allow-empty -m "Created file Integers and Floats: Numeric Security Data"
+GIT_AUTHOR_DATE="2026-04-30T06:30:00.000Z" GIT_COMMITTER_DATE="2026-04-30T06:30:00.000Z" git commit --allow-empty -m "Slicing: Extracting Metadata"
 
-# Commit 3: Created file Lists, Tuples, and Sets: Managing IP Inventories
+# Commit 3: List Comprehensions: Rapid Threat Filtering
 git add .
-GIT_AUTHOR_DATE="2026-04-15T03:30:00.000Z" GIT_COMMITTER_DATE="2026-04-15T03:30:00.000Z" git commit --allow-empty -m "Created file Lists, Tuples, and Sets: Managing IP Inventories"
+GIT_AUTHOR_DATE="2026-04-30T06:45:00.000Z" GIT_COMMITTER_DATE="2026-04-30T06:45:00.000Z" git commit --allow-empty -m "List Comprehensions: Rapid Threat Filtering"
 
-# Commit 4: Created file Dictionaries: Mapping Services and Ports
+# Commit 4: Exception Handling: Building Resilient Scripts
 git add .
-GIT_AUTHOR_DATE="2026-04-16T08:30:00.000Z" GIT_COMMITTER_DATE="2026-04-16T08:30:00.000Z" git commit --allow-empty -m "Created file Dictionaries: Mapping Services and Ports"
+GIT_AUTHOR_DATE="2026-04-30T15:30:00.000Z" GIT_COMMITTER_DATE="2026-04-30T15:30:00.000Z" git commit --allow-empty -m "Exception Handling: Building Resilient Scripts"
 
-# Commit 5: Created file Conditionals and Booleans: Access Control Logic
+# Commit 5: OOP: Classes, Instances, and Inheritance
 git add .
-GIT_AUTHOR_DATE="2026-04-17T03:30:00.000Z" GIT_COMMITTER_DATE="2026-04-17T03:30:00.000Z" git commit --allow-empty -m "Created file Conditionals and Booleans: Access Control Logic"
+GIT_AUTHOR_DATE="2026-04-29T16:30:00.000Z" GIT_COMMITTER_DATE="2026-04-29T16:30:00.000Z" git commit --allow-empty -m "OOP: Classes, Instances, and Inheritance"
 
-# Commit 6: Created file Loops and Iterations: Automated Port Sweeping
+# Commit 6: Strings working with textual data
 git add .
-GIT_AUTHOR_DATE="2026-04-18T04:31:00.000Z" GIT_COMMITTER_DATE="2026-04-18T04:31:00.000Z" git commit --allow-empty -m "Created file Loops and Iterations: Automated Port Sweeping"
+GIT_AUTHOR_DATE="2026-04-27T07:17:00.000Z" GIT_COMMITTER_DATE="2026-04-27T07:17:00.000Z" git commit --allow-empty -m "Strings working with textual data"
 
-# Commit 7: Created file Functions: Reusable Security Tools
+# Commit 7: Integers and Floats: Numeric Security Data
 git add .
-GIT_AUTHOR_DATE="2026-04-19T03:15:00.000Z" GIT_COMMITTER_DATE="2026-04-19T03:15:00.000Z" git commit --allow-empty -m "Created file Functions: Reusable Security Tools"
+GIT_AUTHOR_DATE="2026-04-27T08:18:00.000Z" GIT_COMMITTER_DATE="2026-04-27T08:18:00.000Z" git commit --allow-empty -m "Integers and Floats: Numeric Security Data"
 
-# Commit 8: Created file Importing Modules & Standard Library: OS Interactions
+# Commit 8: List, Tuples, and Sets: Managing IP Inventoriesa
 git add .
-GIT_AUTHOR_DATE="2026-04-19T05:15:00.000Z" GIT_COMMITTER_DATE="2026-04-19T05:15:00.000Z" git commit --allow-empty -m "Created file Importing Modules & Standard Library: OS Interactions"
+GIT_AUTHOR_DATE="2026-04-27T09:20:00.000Z" GIT_COMMITTER_DATE="2026-04-27T09:20:00.000Z" git commit --allow-empty -m "List, Tuples, and Sets: Managing IP Inventoriesa"
 
-# Commit 9: Created file Variable Scope: Managing Configuration Levels
+# Commit 9: Dictionaries: Mappping Services and Ports
 git add .
-GIT_AUTHOR_DATE="2026-04-20T06:17:00.000Z" GIT_COMMITTER_DATE="2026-04-20T06:17:00.000Z" git commit --allow-empty -m "Created file Variable Scope: Managing Configuration Levels"
+GIT_AUTHOR_DATE="2026-04-28T07:30:00.000Z" GIT_COMMITTER_DATE="2026-04-28T07:30:00.000Z" git commit --allow-empty -m "Dictionaries: Mappping Services and Ports"
 
-# Commit 10: Created file Slicing: Extracting Metadata
+# Commit 10: Conditionals and Booleans: Access Control Logic
 git add .
-GIT_AUTHOR_DATE="2026-04-21T03:15:00.000Z" GIT_COMMITTER_DATE="2026-04-21T03:15:00.000Z" git commit --allow-empty -m "Created file Slicing: Extracting Metadata"
+GIT_AUTHOR_DATE="2026-04-28T09:19:00.000Z" GIT_COMMITTER_DATE="2026-04-28T09:19:00.000Z" git commit --allow-empty -m "Conditionals and Booleans: Access Control Logic"
 
-# Commit 11: Created file List Comprehensions: Rapid Threat Filtering
+# Commit 11: Loops and Iterations: Automated Port Sweeping
 git add .
-GIT_AUTHOR_DATE="2026-04-22T05:18:00.000Z" GIT_COMMITTER_DATE="2026-04-22T05:18:00.000Z" git commit --allow-empty -m "Created file List Comprehensions: Rapid Threat Filtering"
+GIT_AUTHOR_DATE="2026-04-28T09:25:00.000Z" GIT_COMMITTER_DATE="2026-04-28T09:25:00.000Z" git commit --allow-empty -m "Loops and Iterations: Automated Port Sweeping"
 
-# Commit 12: Created file File Objects: Log Reading and Writing
+# Commit 12: Functions: Reusable Security Tools
 git add .
-GIT_AUTHOR_DATE="2026-04-23T04:17:00.000Z" GIT_COMMITTER_DATE="2026-04-23T04:17:00.000Z" git commit --allow-empty -m "Created file File Objects: Log Reading and Writing"
+GIT_AUTHOR_DATE="2026-04-29T10:22:00.000Z" GIT_COMMITTER_DATE="2026-04-29T10:22:00.000Z" git commit --allow-empty -m "Functions: Reusable Security Tools"
 
-# Commit 13: Created file Exception Handling: Building Resilient Scripts
+# Commit 13: Importing Modules & Standard Library: OS Interactions
 git add .
-GIT_AUTHOR_DATE="2026-04-24T03:16:00.000Z" GIT_COMMITTER_DATE="2026-04-24T03:16:00.000Z" git commit --allow-empty -m "Created file Exception Handling: Building Resilient Scripts"
+GIT_AUTHOR_DATE="2026-04-29T10:24:00.000Z" GIT_COMMITTER_DATE="2026-04-29T10:24:00.000Z" git commit --allow-empty -m "Importing Modules & Standard Library: OS Interactions"
 
-# Commit 14: Created file OOP: Classes, Instances, and Inheritance
+# Commit 14: Variable Scope: Managing Configuration Levels
 git add .
-GIT_AUTHOR_DATE="2026-04-25T06:19:00.000Z" GIT_COMMITTER_DATE="2026-04-25T06:19:00.000Z" git commit --allow-empty -m "Created file OOP: Classes, Instances, and Inheritance"
+GIT_AUTHOR_DATE="2026-04-29T11:21:00.000Z" GIT_COMMITTER_DATE="2026-04-29T11:21:00.000Z" git commit --allow-empty -m "Variable Scope: Managing Configuration Levels"
 
-# Commit 15: Created file Networking & Cybersecurity Project: Automated Firewall Log Auditor
-git add .
-GIT_AUTHOR_DATE="2026-04-26T07:20:00.000Z" GIT_COMMITTER_DATE="2026-04-26T07:20:00.000Z" git commit --allow-empty -m "Created file Networking & Cybersecurity Project: Automated Firewall Log Auditor"
-
-echo "All 15 commits staged locally. Now push the GitHub Action and let it drip-push them!"
+echo "All 14 commits staged locally. Now push the GitHub Action and let it drip-push them!"
