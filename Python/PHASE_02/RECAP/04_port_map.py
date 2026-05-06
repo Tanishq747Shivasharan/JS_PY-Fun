@@ -1,6 +1,6 @@
 # Dictionaries: Mappping Services and Ports
 
-portDictionary = {
+port_dictionary = {
     80 : 'http',
     443: 'https',
     22 : 'ssh'
@@ -13,4 +13,9 @@ while True:
     except ValueError:
         print("Please enter a valid port number!")
 
-print(portDictionary.get(user_port, "service not found!"))
+service_name = port_dictionary.get(user_port)
+
+if service_name:
+    print(f"Port {user_port} uses {service_name.upper()}")
+else:
+    print(f"No service found for port {user_port}")
