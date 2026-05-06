@@ -1,11 +1,16 @@
 # Dictionaries: Mappping Services and Ports
 
-ip_Man = {
+portDictionary = {
     80 : 'http',
     443: 'https',
     22 : 'ssh'
 }
 
-user_port = int(input("Enter a port number: "))
+while True:
+    try:
+        user_port = int(input("Enter a port number: "))
+        break
+    except ValueError:
+        print("Please enter a valid port number!")
 
-print(ip_Man.get(user_port, "service not found!"))
+print(portDictionary.get(user_port, "service not found!"))
