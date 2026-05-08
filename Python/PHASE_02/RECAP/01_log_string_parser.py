@@ -80,3 +80,34 @@ cnt = input("Enter country name: ")
 age = int(input("Enter your age: "))
 
 print(f"{firstn, lastn, cnt, age}")
+
+# Practice from Day 4 Strings in Python
+
+t3 = 'Thirty'
+d = 'Days'
+o = 'Of'
+p = 'Python'
+print(t3, d, o, p)
+
+company = "Coding For All"
+
+print(company)
+
+print(len(company))
+
+upper_case = company.upper()
+print(upper_case)
+
+lower_case = company.lower()
+print(lower_case)
+
+first_letter_capital = company.capitalize()
+title = company.title()
+swapcase = company.swapcase()
+print(f"{first_letter_capital}\n{title}\n{swapcase}")
+
+print(company[7:22])
+
+print(company.index('Coding'))
+
+print(company.replace('Coding', 'Python'))
