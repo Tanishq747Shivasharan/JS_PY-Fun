@@ -55,3 +55,28 @@ print(f'{num_two} x {num_one} = {product}' )
 
 division = num_one / num_two
 print(f'{num_one} / {num_two} = {division}' )
+
+reminder = num_two % num_one
+print(f"{num_two} % {num_one} = {reminder}")
+
+exp = num_one ** num_two
+print(f'{num_one}^{num_two} = {exp}')
+
+floor_division = num_one // num_two
+print(f"{num_one} floor division {num_two} = {floor_division}")
+
+r = 30
+area_of_circle = 3.14 * r ** 2
+circum_of_circle = 2 * 3.14 * r
+print(f"Area of circle(Static value): {area_of_circle}")
+print(f"Circumference of circle(Static value): {circum_of_circle}")
+user_r = int(input("Enter custom radius to calculate the area of circle: "))
+area_of_ucircle = 3.14 * user_r ** 2
+print(f"The area of user defined radius circle is: {area_of_ucircle}")
+
+firstn = input("Enter first name: ")
+lastn = input("Enter last name: ")
+cnt = input("Enter country name: ")
+age = int(input("Enter your age: "))
+
+print(f"{firstn, lastn, cnt, age}")
