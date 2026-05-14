@@ -35,3 +35,26 @@ area_of_circle = pi * r * radius
 circum_of_circle = 2 * pi * radius
 print(f"The area of circle is {area_of_circle}\n The circumference of circle is {circum_of_circle}")
 
+m =2 # Slope
+c = -2
+print(f"Slope ={m}")
+y_intercept = c
+print(f"y-intercept ={y_intercept}")
+x_intercept = -c/m
+print(f"x-intercept ={x_intercept}")
+
+x1 = 2
+y1 = 2
+x2 = 6
+y2 = 10
+slope = (y2-y1)/(x2-x1)
+print(f"Slope = {slope}")
+d = ((x2-x1)**2 + (y2-y1)**2) ** 0.5
+print(f"Distance = {d}")
+
+if m == slope:
+    print("Both the slopes are equal")
+elif m > slope:
+    print("The first calculated slope is greater then the second!")
+else:
+    print("The second calculated slope is greater then the first!")
