@@ -72,7 +72,7 @@ if "jargon" in sen:
 val = "python"
 len_val = len(val)
 print(len_val)
-float(len_val)
+float_len = float(len_val)
 print(type(val))
-str(len_val)
-print(type(val))
+final_string = str(len_val)
+print(repr(final_string))
