@@ -76,3 +76,25 @@ float_len = float(len_val)
 print(type(val))
 final_string = str(len_val)
 print(repr(final_string))
+
+num = int(input("Enter a number: "))
+if(num%2==0):
+    print("The entered number is even")
+else:
+    print("The entered number is odd.")
+
+div = 7 // 3
+if(div == int(2.7)):
+    print("Value is equal!")
+
+str_num = "10"
+num = 10
+if(type(str_num) == type(num)):
+    print("Both have equal types!")
+else:
+    print(f"Not equal {type(str_num)} | {type(num)}")
+
+if(int(9.8) == 10):
+    print(True)
+else:
+    print(False)
