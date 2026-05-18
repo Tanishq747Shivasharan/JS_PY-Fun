@@ -43,6 +43,7 @@ print(f"y-intercept ={y_intercept}")
 x_intercept = -c/m
 print(f"x-intercept ={x_intercept}")
 
+
 x1 = 2
 y1 = 2
 x2 = 6
@@ -98,3 +99,16 @@ if(int(9.8) == 10):
     print(True)
 else:
     print(False)
+
+h = int(input("Enter hours: "))
+rph = int(input("Enter rate per hour: "))
+weekly_earning = h * rph
+print(f"Your weekly earning is {weekly_earning}")
+
+no_of_years = int(input("Enter number of years you have lived: "))
+day_year = 365.2425 * no_of_years
+total_seconds = day_year * 86400
+print(f"You have lived for {total_seconds} seconds")
+
+for i in range(1, 6):
+    print(i, 1, i, i**2, i**3)
