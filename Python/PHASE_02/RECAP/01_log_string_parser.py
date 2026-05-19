@@ -110,4 +110,25 @@ print(company[7:22])
 
 print(company.index('Coding'))
 
-print(company.replace('Coding', 'Python'))
+print(company.replace('Coding', 'Python')) 
+
+string1 = "Python for Everyone"
+string2 = string1.replace("Everyone", "All")
+print(string2)
+
+print(company.split(" "))
+
+mncs = "Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon"
+print(mncs.split(","))
+
+print(company[0])
+
+print(company[-1])
+
+print(company[10])
+
+words = string1.title().split()
+print(words[0][0]+words[1][0]+words[2][0])
+
+words1 = company.split()
+print(words1[0][0]+words1[1][0]+words1[2][0]) # 19
