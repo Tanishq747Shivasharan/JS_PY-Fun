@@ -132,3 +132,16 @@ print(words[0][0]+words[1][0]+words[2][0])
 
 words1 = company.split()
 print(words1[0][0]+words1[1][0]+words1[2][0]) # 19
+
+print(company.index('C'))
+print(company.index('F'))
+
+str3 = 'Coding For All People'
+print(str3.rfind('l'))
+
+sent1 = 'You cannot end a sentence with because because because is a conjunction'
+print(sent1.find('because'))
+
+print(sent1.rindex('because'))
+
+print(sent1[sent1.index('because'):sent1.rfind('because') + len('because')])
