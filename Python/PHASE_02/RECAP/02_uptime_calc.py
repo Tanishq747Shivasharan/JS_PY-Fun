@@ -28,3 +28,10 @@ area_of_rect = length * width
 perimeter_of_rect = 2 * (length + width)
 print(f"The area of rectangle is {area_of_rect}")
 print(f"The perimeter of rectangle is {perimeter_of_rect}")
+
+pi = 3.14
+radius = float("Enter radius of a circle: ")
+area_of_circle = pi * r * radius
+circum_of_circle = 2 * pi * radius
+print(f"The area of circle is {area_of_circle}\n The circumference of circle is {circum_of_circle}")
+
