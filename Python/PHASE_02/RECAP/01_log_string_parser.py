@@ -145,3 +145,16 @@ print(sent1.find('because'))
 print(sent1.rindex('because'))
 
 print(sent1[sent1.index('because'):sent1.rfind('because') + len('because')])
+
+if(company.startswith('Coding')):
+    print("True")
+else:
+    print("False")
+
+if(company.endswith('coding')):
+    print("True")
+else:
+    print("False")
+
+given_string = '   Coding For All      ' 
+print(given_string.strip())
