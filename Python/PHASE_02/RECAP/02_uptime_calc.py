@@ -58,3 +58,21 @@ elif m > slope:
     print("The first calculated slope is greater then the second!")
 else:
     print("The second calculated slope is greater then the first!")
+
+x = -3
+y = x*x + 6*x + 9
+print(f"y={y}")
+if y==0:
+    print("y becomes 0 at x={x}")
+
+sen = "I hope this course is not full of jargon."
+if "jargon" in sen:
+    print("Jargon exists in the sentence.")
+
+val = "python"
+len_val = len(val)
+print(len_val)
+float(len_val)
+print(type(val))
+str(len_val)
+print(type(val))
